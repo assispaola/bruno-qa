@@ -20,7 +20,9 @@
       "WebFetch(domain:mastersoftwaretesting.com)",
       "WebFetch(domain:knowledgemap.pm)",
       "WebFetch(domain:www.bcs.org)",
-      "Bash(python -c ' *)"
+      "Bash(python -c ' *)",
+      "WebFetch(domain:github.com)",
+      "Bash(node --check \"C:/projetos/bruno-qa/bruno-qa/app.js\")"
     ]
   }
 }

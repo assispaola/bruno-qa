@@ -2187,8 +2187,18 @@ function renderCrono(){
     </div>`).join('');
 }
 function toggleCheck(key,el){
-  if(S.checks[key]){ delete S.checks[key]; el.classList.remove('checked'); }
-  else { S.checks[key]=1; el.classList.add('checked'); S.xp+=10; updateStats(); checkAchievements(); }
+  if(S.checks[key]){
+    delete S.checks[key];
+    el.classList.remove('checked');
+    S.xp = Math.max(0, S.xp - 10);
+    updateStats();
+  } else {
+    S.checks[key]=1;
+    el.classList.add('checked');
+    S.xp += 10;
+    updateStats();
+    checkAchievements();
+  }
   save();
 }
 
