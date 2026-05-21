@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schneider QA — CTFL 4.0 ⚔️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+
+<!-- ACHIEVEMENT POPUP -->
+<div class="ach-popup" id="achPopup">
+  <div class="ach-popup-icon" id="achPopupIcon"></div>
+  <div>
+    <h4 id="achPopupTitle">Conquista Desbloqueada!</h4>
+    <p id="achPopupDesc"></p>
+  </div>
+</div>
+
+<!-- LEVEL UP -->
+<div class="levelup-overlay" id="lvlOverlay">
+  <div class="levelup-text" id="lvlText">RANK UP!</div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo"><span class="nav-sword">⚔</span> SCHNEIDER QA</div>
+    <div class="nav-tabs">
+      <button class="nav-tab active" onclick="showTab('home',this)">🏠 Início</button>
+      <button class="nav-tab" onclick="showTab('sim',this)">🎯 Simulado</button>
+      <button class="nav-tab" onclick="showTab('flash',this)">⚡ Flashcards</button>
+      <button class="nav-tab" onclick="showTab('crono',this)">📅 Cronograma</button>
+      <button class="nav-tab" onclick="showTab('arsenal',this)">⚔️ Arsenal</button>
+      <button class="nav-tab" onclick="showTab('tutor',this)">🗡️ Sensei</button>
+    </div>
+    <div class="nav-right">
+      <div class="nav-xp">🔥 <span id="xpTotal">0 XP</span></div>
+      <div class="nav-rank-badge" id="navRankBadge">Ronin</div>
+      <button class="nav-settings" onclick="openSettings()" title="Configurações da API">⚙️</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════ HOME ═══════════ -->
+<section id="tab-home" class="section active">
+  <div class="hero">
+    <div>
+      <div class="hero-tag">⚔️ Sua jornada começa aqui</div>
+      <h1>Olá,<br><span>Schneider!</span><br>Bora dominar 🔥</h1>
+      <div class="hero-quote" id="heroQuote">
+        "Vou me tornar o maior espadachim do mundo!" <strong>— Roronoa Zoro</strong>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <div class="big">4.0</div>
+      <div class="small">CTFL<br>Syllabus</div>
+    </div>
+  </div>
+
+  <div class="rank-card">
+    <div class="rank-icon" id="rankIcon">🗡️</div>
+    <div class="rank-info">
+      <div class="rank-title" id="rankTitle">Ronin</div>
+      <div class="rank-sub" id="rankSub">Espadachim sem mestre — sua jornada começa agora</div>
+      <div class="rank-pbar-wrap"><div class="rank-pbar-fill" id="rankPbar" style="width:0%"></div></div>
+      <div class="rank-next">
+        <span id="rankNextLabel">Próximo rank:</span>
+        <span id="rankNextXP">200 XP</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card"><div class="stat-val red" id="statMod">0/6</div><div class="stat-label">Módulos Concluídos</div></div>
+    <div class="stat-card"><div class="stat-val gold" id="statXP">0</div><div class="stat-label">XP Conquistado</div></div>
+    <div class="stat-card"><div class="stat-val green" id="statAcerto">—</div><div class="stat-label">Taxa de Acerto</div></div>
+    <div class="stat-card"><div class="stat-val blue" id="statCombo">0</div><div class="stat-label">Melhor Combo</div></div>
+  </div>
+
+  <div class="progress-card">
+    <div class="progress-top">
+      <h3>Progresso Geral</h3>
+      <div class="progress-pct" id="pct">0%</div>
+    </div>
+    <div class="pbar"><div class="pbar-fill" id="pbarFill" style="width:0%"></div></div>
+    <div class="pbar-labels">
+      <span id="pbarLeft">0 de 6 módulos</span>
+      <span>Meta: 65% na prova (26/40)</span>
+    </div>
+  </div>
+
+  <div class="section-title">🏆 Conquistas do Espadachim</div>
+  <div class="achievements-grid" id="achGrid"></div>
+
+  <div class="section-title">📚 Os 6 Capítulos do CTFL 4.0</div>
+  <div class="modules-grid" id="modsGrid"></div>
+</section>
+
+<!-- ═══════════ SIMULADO ═══════════ -->
+<section id="tab-sim" class="section">
+  <div id="simIntro">
+    <div class="section-title">🎯 Escolha seu Modo de Batalha</div>
+    <div class="sim-modes">
+      <div class="sim-mode-card" onclick="startSim(false)">
+        <span class="sim-mode-icon">🎯</span>
+        <div class="sim-mode-name">Simulado Completo</div>
+        <div class="sim-mode-desc">40 questões baseadas no estilo oficial ISTQB/BSTQB cobrindo todos os 6 capítulos do syllabus. Com timer, gabarito comentado e breakdown por capítulo.</div>
+        <div class="sim-chips">
+          <span class="sim-chip">⏱ 60 minutos</span>
+          <span class="sim-chip">40 questões</span>
+          <span class="sim-chip">Mínimo 26/40</span>
+        </div>
+      </div>
+      <div class="sim-mode-card boss-card" onclick="startSim(true)">
+        <span class="sim-mode-icon">⚔️</span>
+        <div class="sim-mode-name">Boss Battle — Modo Mihawk</div>
+        <div class="sim-mode-desc">10 questões de elite para os que dominam o conteúdo. Mais difíceis, mais específicas, mais XP. Prove que está pronto para enfrentar o Olho de Gavião.</div>
+        <div class="sim-chips">
+          <span class="sim-chip gold">⏱ 20 minutos</span>
+          <span class="sim-chip gold">10 questões elite</span>
+          <span class="sim-chip gold">XP Dobrado</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sim-running" id="simRunning">
+    <div class="sim-header-bar">
+      <div>
+        <div class="sim-q-counter" id="simCounter">Questão 1 de 40</div>
+        <div class="pbar" style="height:6px;width:200px;margin-top:6px;">
+          <div class="pbar-fill" id="simPbar" style="width:2.5%"></div>
+        </div>
+      </div>
+      <div class="combo-display" id="comboDisplay">🔥 COMBO x1</div>
+      <div class="sim-timer" id="simTimer">60:00</div>
+    </div>
+    <div class="combo-banner" id="comboBanner"></div>
+    <div class="sim-q-area" id="simQArea"></div>
+    <div class="sim-nav" id="simNav"></div>
+  </div>
+
+  <div class="sim-result" id="simResult">
+    <div class="sim-res-card" id="simResCard">
+      <div style="font-size:.78rem;font-weight:600;color:var(--muted2);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;" id="simResLabel">Sua pontuação</div>
+      <div class="sim-res-score" id="simResScore">—</div>
+      <div class="sim-res-sub" id="simResSub">de 40 questões corretas</div>
+      <div class="sim-res-status" id="simResStatus">—</div>
+    </div>
+    <div class="sim-breakdown" id="simBreakdown"></div>
+    <div style="text-align:center;margin-bottom:32px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <button class="start-btn" onclick="resetSim()">↺ Novo Desafio</button>
+    </div>
+    <div id="simReview"></div>
+  </div>
+</section>
+
+<!-- ═══════════ FLASHCARDS ═══════════ -->
+<section id="tab-flash" class="section">
+  <div class="section-title">⚡ Flashcards — Clique para revelar a resposta</div>
+  <div class="fc-filters" id="fcFilters"></div>
+  <div class="fc-grid" id="fcGrid"></div>
+</section>
+
+<!-- ═══════════ CRONOGRAMA ═══════════ -->
+<section id="tab-crono" class="section">
+  <div class="crono-intro">
+    <h3>📅 Seu Plano de Estudos Personalizado</h3>
+    <p>Escolha quantas semanas você tem disponível e o cronograma se adapta. Cada dia tem uma meta clara. Marque os dias concluídos para ganhar XP e acompanhar seu progresso!</p>
+  </div>
+  <div class="crono-selector">
+    <button class="crono-btn active" onclick="selectCrono(2,this)">2 Semanas (intensivo)</button>
+    <button class="crono-btn" onclick="selectCrono(4,this)">4 Semanas (moderado)</button>
+    <button class="crono-btn" onclick="selectCrono(6,this)">6 Semanas (tranquilo)</button>
+  </div>
+  <div class="week-grid" id="weekGrid"></div>
+  <div class="crono-tips">
+    <h3>⚔️ Dicas do Sensei para a Prova</h3>
+    <ul>
+      <li>Leia o Syllabus oficial do BSTQB pelo menos uma vez — é a fonte definitiva das questões</li>
+      <li>Os 7 Princípios de Teste <strong>sempre caem</strong> — decore todos e entenda o contexto de cada um</li>
+      <li>Particionamento de Equivalência e Análise de Valor Limite são as mais frequentes no Cap. 4</li>
+      <li>Diferença entre Severidade e Prioridade de defeitos é clássica de cair — entenda bem</li>
+      <li>Nos dias finais, foque nos simulados deste portal e nos simulados oficiais do BSTQB</li>
+      <li>Chegue com 15 min de antecedência, leve documento com foto — você está preparado!</li>
+      <li>Como Zoro: durma bem, acorde cedo e <em>nada aconteceu</em> 🗡️</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════ ARSENAL ═══════════ -->
+<section id="tab-arsenal" class="section">
+  <div class="arsenal-intro">
+    <div class="arsenal-intro-icon">⚔️</div>
+    <div>
+      <h2>Arsenal do QA — Referência Rápida</h2>
+      <p>Todas as tabelas, fórmulas e comparações que mais caem na prova. Consulte antes de estudar cada capítulo e revise antes de dormir nos dias finais.</p>
+    </div>
+  </div>
+
+  <div class="section-title">📌 Os 7 Princípios de Teste</div>
+  <div class="ref-card" style="margin-bottom:28px;">
+    <div class="ref-body" style="padding:0;">
+      <table class="ref-table" style="width:100%">
+        <thead><tr><th>#</th><th>Princípio</th><th>Palavra-chave</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Teste mostra presença de defeitos (não ausência)</td><td style="color:var(--gold)">Presença</td></tr>
+          <tr><td>2</td><td>Teste exaustivo é impossível — use análise de risco</td><td style="color:var(--gold)">Risco</td></tr>
+          <tr><td>3</td><td>Teste antecipado economiza tempo e dinheiro (Shift Left)</td><td style="color:var(--gold)">Cedo</td></tr>
+          <tr><td>4</td><td>Agrupamento de defeitos — regra 80/20 dos módulos</td><td style="color:var(--gold)">80/20</td></tr>
+          <tr><td>5</td><td>Paradoxo do pesticida — varie seus casos de teste</td><td style="color:var(--gold)">Variar</td></tr>
+          <tr><td>6</td><td>Teste depende do contexto — não existe abordagem única</td><td style="color:var(--gold)">Contexto</td></tr>
+          <tr><td>7</td><td>Ilusão de ausência de defeitos — software sem bugs pode ser inútil</td><td style="color:var(--gold)">Ilusão</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section-title">🎯 Técnicas de Teste — Quando Usar</div>
+  <div class="ref-card" style="margin-bottom:28px;">
+    <div class="ref-body" style="padding:0;">
+      <table class="ref-table">
+        <thead><tr><th>Técnica</th><th>Tipo</th><th>Use quando...</th></tr></thead>
+        <tbody>
+          <tr><td>Particionamento de Equivalência</td><td>Caixa-Preta</td><td>Dividir entradas em grupos de comportamento igual</td></tr>
+          <tr><td>Análise de Valor Limite</td><td>Caixa-Preta</td><td>Testar nos limites e fronteiras das partições</td></tr>
+          <tr><td>Tabela de Decisão</td><td>Caixa-Preta</td><td>Múltiplas condições gerando diferentes ações</td></tr>
+          <tr><td>Transição de Estado</td><td>Caixa-Preta</td><td>Sistema com estados definidos (ex: pedido, fluxo login)</td></tr>
+          <tr><td>Caso de Uso</td><td>Caixa-Preta</td><td>Fluxos de uso do usuário (principal + alternativos)</td></tr>
+          <tr><td>Cobertura de Instruções</td><td>Caixa-Branca</td><td>% de linhas de código executadas pelos testes</td></tr>
+          <tr><td>Cobertura de Ramificações</td><td>Caixa-Branca</td><td>% de if/else testados — mais forte que instruções</td></tr>
+          <tr><td>Suposição de Erro</td><td>Experiência</td><td>Usar intuição para achar prováveis pontos de falha</td></tr>
+          <tr><td>Teste Exploratório</td><td>Experiência</td><td>Design + execução + aprendizado simultâneos</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="arsenal-grid">
+    <div class="ref-card">
+      <div class="ref-head"><span class="ref-head-icon">📊</span><h3>4 Níveis de Teste</h3></div>
+      <div class="ref-body">
+        <div class="ref-row"><div class="ref-key">Componente (Unit)</div><div class="ref-val red">Menor unidade isolada</div></div>
+        <div class="ref-row"><div class="ref-key">Integração de Comp.</div><div class="ref-val red">Interfaces entre componentes</div></div>
+        <div class="ref-row"><div class="ref-key">Sistema</div><div class="ref-val red">End-to-end completo</div></div>
+        <div class="ref-row"><div class="ref-key">Aceite (UAT)</div><div class="ref-val red">Validação pelo cliente</div></div>
+      </div>
+    </div>
+
+    <div class="ref-card">
+      <div class="ref-head"><span class="ref-head-icon">👥</span><h3>Tipos de Revisão (Formalidade ↑)</h3></div>
+      <div class="ref-body">
+        <div class="ref-row"><div class="ref-key">Informal</div><div class="ref-val">Sem processo definido</div></div>
+        <div class="ref-row"><div class="ref-key">Walkthrough</div><div class="ref-val">Autor guia revisores</div></div>
+        <div class="ref-row"><div class="ref-key">Revisão Técnica</div><div class="ref-val">Avalia adequação técnica</div></div>
+        <div class="ref-row"><div class="ref-key">Inspeção</div><div class="ref-val green">Mais formal + métricas</div></div>
+      </div>
+    </div>
+
+    <div class="ref-card">
+      <div class="ref-head"><span class="ref-head-icon">⚙️</span><h3>Ferramentas por Categoria</h3></div>
+      <div class="ref-body">
+        <div class="ref-row"><div class="ref-key">Automação UI</div><div class="ref-val blue">Selenium, Cypress, Playwright</div></div>
+        <div class="ref-row"><div class="ref-key">Performance</div><div class="ref-val blue">JMeter, k6, Gatling</div></div>
+        <div class="ref-row"><div class="ref-key">Análise Estática</div><div class="ref-val blue">SonarQube, ESLint</div></div>
+        <div class="ref-row"><div class="ref-key">Gestão Testes</div><div class="ref-val blue">TestRail, Zephyr</div></div>
+        <div class="ref-row"><div class="ref-key">Bugs / CI</div><div class="ref-val blue">Jira, GitHub Actions</div></div>
+      </div>
+    </div>
+
+    <div class="ref-card">
+      <div class="ref-head"><span class="ref-head-icon">⚠️</span><h3>Severidade × Prioridade</h3></div>
+      <div class="ref-body">
+        <div class="ref-row"><div class="ref-key">Severidade</div><div class="ref-val">Impacto técnico do defeito</div></div>
+        <div class="ref-row"><div class="ref-key">Prioridade</div><div class="ref-val">Urgência de negócio</div></div>
+        <div class="ref-row"><div class="ref-key">Podem diferir?</div><div class="ref-val green">SIM — sempre!</div></div>
+        <div class="ref-row"><div class="ref-key">Exemplo clássico</div><div class="ref-val red">Bug visual na tela de login</div></div>
+        <div class="ref-row"><div class="ref-key">→ Severidade</div><div class="ref-val">Baixa (só visual)</div></div>
+        <div class="ref-row"><div class="ref-key">→ Prioridade</div><div class="ref-val red">Alta (imagem do banco!)</div></div>
+      </div>
+    </div>
+
+    <div class="ref-card">
+      <div class="ref-head"><span class="ref-head-icon">📐</span><h3>Fórmulas Essenciais</h3></div>
+      <div class="ref-body">
+        <div class="formula-card"><span class="formula-label">Nível de Risco</span><span class="formula-val">P × I</span></div>
+        <div class="formula-card"><span class="formula-label">Aprovação CTFL</span><span class="formula-val">≥ 26/40 (65%)</span></div>
+        <div class="formula-card"><span class="formula-label">Formalidade Revisão</span><span class="formula-val">Insp > Téc > Walk > Info</span></div>
+        <div class="formula-card"><span class="formula-label">Cobertura mais forte</span><span class="formula-val">Ramificações > Instruções</span></div>
+      </div>
+    </div>
+
+    <div class="ref-card">
+      <div class="ref-head"><span class="ref-head-icon">🔄</span><h3>Ciclos e Processos</h3></div>
+      <div class="ref-body">
+        <div class="ref-row"><div class="ref-key">Processo de Teste</div><div class="ref-val">Plan → Monitor → Análise → Design → Impl → Exec → Conclusão</div></div>
+        <div class="ref-row"><div class="ref-key">Ciclo de Bug</div><div class="ref-val">Novo → Aberto → Em andamento → Resolvido → Fechado</div></div>
+        <div class="ref-row"><div class="ref-key">Processo de Revisão</div><div class="ref-val">Planejar → Início → Rev. Individual → Comunicação → Correção → Verificação</div></div>
+      </div>
+    </div>
+
+    <div class="ref-card">
+      <div class="ref-head"><span class="ref-head-icon">🔢</span><h3>Siglas Essenciais</h3></div>
+      <div class="ref-body">
+        <div class="ref-row"><div class="ref-key">SDLC</div><div class="ref-val blue">Software Development Life Cycle</div></div>
+        <div class="ref-row"><div class="ref-key">STLC</div><div class="ref-val blue">Software Testing Life Cycle</div></div>
+        <div class="ref-row"><div class="ref-key">UAT</div><div class="ref-val blue">User Acceptance Testing</div></div>
+        <div class="ref-row"><div class="ref-key">BDD</div><div class="ref-val blue">Behavior-Driven Development</div></div>
+        <div class="ref-row"><div class="ref-key">ATDD</div><div class="ref-val blue">Acceptance Test-Driven Development</div></div>
+        <div class="ref-row"><div class="ref-key">TDD</div><div class="ref-val blue">Test-Driven Development</div></div>
+        <div class="ref-row"><div class="ref-key">CI/CD</div><div class="ref-val blue">Continuous Integration / Delivery</div></div>
+      </div>
+    </div>
+
+    <div class="ref-card">
+      <div class="ref-head"><span class="ref-head-icon">🎭</span><h3>Papéis na Inspeção</h3></div>
+      <div class="ref-body">
+        <div class="ref-row"><div class="ref-key">Moderador</div><div class="ref-val">Lidera, garante o processo</div></div>
+        <div class="ref-row"><div class="ref-key">Autor</div><div class="ref-val">Criou o artefato revisado</div></div>
+        <div class="ref-row"><div class="ref-key">Revisor</div><div class="ref-val">Identifica defeitos</div></div>
+        <div class="ref-row"><div class="ref-key">Escriba</div><div class="ref-val">Registra os defeitos encontrados</div></div>
+        <div class="ref-row"><div class="ref-key">Líder de Teste</div><div class="ref-val">Planeja e organiza a revisão</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">🗡️ Mindset Zoro para a Prova</div>
+  <div class="ref-card" style="margin-bottom:28px;">
+    <div class="ref-body">
+      <div class="ref-row"><div class="ref-key">"Nada aconteceu."</div><div class="ref-val red">Mantenha a calma sob pressão. Uma questão difícil não define a prova.</div></div>
+      <div class="ref-row"><div class="ref-key">"Vou me tornar o maior."</div><div class="ref-val">Saiba que você pode passar. Acredite no preparo que fez.</div></div>
+      <div class="ref-row"><div class="ref-key">Santoryu (3 espadas)</div><div class="ref-val red">Treine 3 frentes: teoria + simulados + flashcards. Sempre.</div></div>
+      <div class="ref-row"><div class="ref-key">Zoro e o mapa</div><div class="ref-val">Perdeu? Releia a questão com calma. O enunciado já diz a resposta.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SENSEI (AI TUTOR) ═══════════ -->
+<section id="tab-tutor" class="section">
+  <div class="section-title">⚔️ Sensei Zoro — Tutor CTFL 4.0</div>
+  <div class="ai-card">
+    <div class="ai-head">
+      <div class="ai-ava">⚔️</div>
+      <div class="ai-info">
+        <h3>Sensei Zoro — Especialista CTFL 4.0</h3>
+        <p id="aiStatus">Configure sua chave de API no ⚙️ para ativar o Sensei</p>
+      </div>
+      <div id="aiStatusDot" class="ai-warn"></div>
+    </div>
+    <div class="ai-msgs" id="aiMsgs">
+      <div class="msg ai">
+        <div class="msg-ava">⚔️</div>
+        <div class="bubble">
+          <strong>Schneider</strong>... você apareceu. Bom. 🗡️<br><br>
+          Sou especialista no Syllabus v4.0 do ISTQB/BSTQB. Me pergunte qualquer coisa sobre o conteúdo da prova — conceitos, técnicas, diferenças entre termos, o que mais cai, dicas...<br><br>
+          Você formado em <strong>ADS</strong> já tem a base certa. Agora é solidificar o vocabulário de QA e partir para cima.<br><br>
+          ⚠️ Para me usar, clique no <strong>⚙️</strong> no canto superior direito e configure sua chave da API Claude (Anthropic).<br><br>
+          <em>Nada aconteceu. Vamos começar.</em> 💪
+        </div>
+      </div>
+    </div>
+    <div class="quick-row">
+      <button class="q-chip" onclick="sendQuick('Explica os 7 princípios de teste de forma simples com exemplos práticos')">7 Princípios</button>
+      <button class="q-chip" onclick="sendQuick('Qual diferença entre erro, defeito e falha? Dá um exemplo de cada')">Erro × Defeito × Falha</button>
+      <button class="q-chip" onclick="sendQuick('Como funciona o Particionamento de Equivalência com exemplo prático de campo de formulário?')">Particionamento</button>
+      <button class="q-chip" onclick="sendQuick('Explica Análise de Valor Limite com exemplo numérico completo')">Valor Limite</button>
+      <button class="q-chip" onclick="sendQuick('Qual diferença entre severidade e prioridade de defeito? Com exemplo do banco')">Severidade × Prioridade</button>
+      <button class="q-chip" onclick="sendQuick('O que é teste de regressão e quando usar? Qual a diferença para teste de confirmação?')">Regressão × Confirmação</button>
+      <button class="q-chip" onclick="sendQuick('Quais são os tipos de revisão no teste estático? Ordene por formalidade')">Tipos de Revisão</button>
+      <button class="q-chip" onclick="sendQuick('Me dê as 10 dicas mais importantes para passar na prova CTFL 4.0')">Top 10 dicas prova</button>
+      <button class="q-chip" onclick="sendQuick('Explica a diferença entre BDD e ATDD, com exemplos de sintaxe')">BDD × ATDD</button>
+      <button class="q-chip" onclick="sendQuick('Como Zoro treinaria para o CTFL? Dica de rotina de estudos de 2 semanas')">Rotina Zoro</button>
+    </div>
+    <div class="ai-inp-row">
+      <textarea class="ai-inp" id="aiInp" placeholder="Sua dúvida, Schneider..." rows="1" onkeydown="handleAiKey(event)"></textarea>
+      <button class="ai-btn" id="aiBtn" onclick="sendAI()">➤</button>
+    </div>
+  </div>
+</section>
+
+</div><!-- .page -->
+
+<!-- ═══════════ CAPÍTULO (PÁGINA FULL) ═══════════ -->
+<section id="tab-chapter" class="section">
+  <div class="chp-bar" id="chpBar">
+    <button class="chp-back" onclick="backToHome()">← Voltar</button>
+    <div class="chp-bar-meta">
+      <div class="chp-bar-num" id="chpBarNum">Capítulo 1 de 6</div>
+      <div class="chp-bar-name" id="chpBarName"></div>
+    </div>
+  </div>
+  <div class="chp-hero" id="chpHero"></div>
+  <div class="chp-body" id="chpBody"></div>
+</section>
+
+<!-- MODAL — Configurações da API -->
+<div class="overlay" id="settingsOverlay" onclick="closeSettingsOverlay(event)">
+  <div class="modal" style="max-width:500px;border-top-color:var(--gold);">
+    <div class="modal-hd">
+      <div><h2>⚙️ Configurações</h2><p>Configure a chave de API do Sensei Zoro</p></div>
+      <button class="modal-x" onclick="closeSettings()">✕</button>
+    </div>
+    <div class="modal-bd">
+      <div class="cb">
+        <h3>🗡️ Chave da API Claude (Anthropic)</h3>
+        <p>O Sensei Zoro usa a <strong>API Claude da Anthropic</strong> para responder suas dúvidas sobre o CTFL. Você precisa de uma chave de API para ativar o tutor.</p>
+        <p style="margin-top:8px;">Obtenha sua chave em <strong>console.anthropic.com</strong> → API Keys → Create Key.</p>
+        <div style="margin-top:16px;">
+          <input type="password" id="apiKeyInput" class="settings-input" placeholder="sk-ant-api03-..." autocomplete="off">
+          <button class="start-btn" onclick="saveApiKey()" style="width:100%;margin-bottom:10px;">💾 Salvar Chave</button>
+          <button onclick="clearApiKey()" style="width:100%;background:none;border:1px solid var(--border);border-radius:10px;padding:10px;color:var(--muted2);cursor:pointer;font-family:'Outfit',sans-serif;font-size:.82rem;transition:all .2s;" onmouseover="this.style.borderColor='var(--red)'" onmouseout="this.style.borderColor='var(--border)'">🗑 Remover Chave</button>
+          <div class="settings-saved" id="settingsSaved">✅ Chave salva! O Sensei está pronto.</div>
+        </div>
+      </div>
+      <div class="tip">A chave é salva apenas no seu navegador (localStorage) e enviada somente para a API da Anthropic ao usar o chat. Nunca sai do seu computador de outra forma.</div>
+      <div class="info-box" style="margin-top:0;">O modelo usado é <strong>claude-sonnet-4-5</strong> com contexto especializado no Syllabus CTFL 4.0.</div>
+    </div>
+  </div>
+</div>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Voltar ao topo">↑</button>
+
+<footer>
+  Forjado para <strong>Schneider</strong> — sua vaga como QA está chegando! ⚔️
+  <span class="kanji-deco">剣 道 最強</span><br>
+  Baseado no <strong>ISTQB® CTFL Syllabus v4.0 — BSTQB®</strong>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3)",
+      "Bash(python3 -c \"import pdfplumber; print\\('pdfplumber available'\\)\")",
+      "Bash(pip install *)",
+      "Bash(python3 -m pip install pdfplumber -q)",
+      "Bash(ls \"C:\\\\projetos\\\\bruno-qa\\\\\" && ls \"C:\\\\projetos\\\\bruno-qa\\\\imgs\" 2>/dev/null || echo \"pasta imgs nao encontrada\")",
+      "Bash(node -e \"require\\('fs'\\).readFileSync\\('C:/projetos/bruno-qa/app.js','utf8'\\); console.log\\('Parse OK - file readable'\\)\")",
+      "Bash(node --check \"C:/projetos/bruno-qa/app.js\")",
+      "WebFetch(domain:istqb-main-web.s3.amazonaws.com)",
+      "WebFetch(domain:www.istqb.org)",
+      "WebSearch",
+      "WebFetch(domain:www.istqb.guru)",
+      "WebFetch(domain:www.testing101.net)",
+      "WebFetch(domain:www.gasq.org)",
+      "WebFetch(domain:swisstestingboard.org)",
+      "WebFetch(domain:www.istqb.com)",
+      "WebFetch(domain:istqb.org)",
+      "WebFetch(domain:mastersoftwaretesting.com)",
+      "WebFetch(domain:knowledgemap.pm)",
+      "WebFetch(domain:www.bcs.org)",
+      "Bash(python -c ' *)"
+    ]
+  }
+}

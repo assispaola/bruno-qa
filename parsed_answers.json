@@ -1,0 +1,11 @@
+{
+  "exam_a_answers": {},
+  "exam_b_answers": {
+    "23": {
+      "answer": "c",
+      "lo": "FL-4.2.4",
+      "k_level": "K3",
+      "points": 1
+    }
+  }
+}

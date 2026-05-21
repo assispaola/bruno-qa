@@ -1,0 +1,486 @@
+{
+  "exam_a_answers": {
+    "1": {
+      "answer": "c",
+      "lo": "a) Não está correto. É impossível provar que não há mais defeitos no\nsistema em teste. Veja o princípio de teste 1\nb) Não está correto. Consulte o princípio de teste 7\nc) Está correto. Os testes identificam defeitos e falhas, o que reduz o\nnível de risco e, ao mesmo tempo, aumenta a confiança no nível de\nqualidade do objeto de teste\nd) Não está correto. É impossível testar todas as combinações de\nentradas (ver princípio de teste 2)",
+      "k_level": "FL-1.1.1",
+      "points": "K1"
+    },
+    "2": {
+      "answer": "a",
+      "lo": "a) Está correto. É importante que os testadores estejam envolvidos\ndesde o início do ciclo de vida do desenvolvimento de software\n(SDLC). Isso aumentará a compreensão das decisões de projeto e\npermitirá a detecção precoce de defeitos.\nb) Não está correto. Tanto os desenvolvedores quanto os testadores\nterão maior compreensão dos produtos de trabalho uns dos outros\ne de como testar o código\nc) Não está correto. Os usuários finais não ajudarão os testadores a\naumentar a qualidade dos relatórios de defeitos; além disso, os\nusuários geralmente não participam de níveis de teste de baixo\nnível, como o teste de integração\nd) Não está correto. Ser certificado não significa automaticamente que\no testador será melhor no projeto de testes",
+      "k_level": "FL-1.2.1",
+      "points": "K2"
+    },
+    "3": {
+      "answer": "a",
+      "lo": "a) Está correto. Esse princípio significa que, se os mesmos testes\nforem repetidos várias vezes, eventualmente esses testes não\nencontrarão mais nenhum novo defeito. Provavelmente é por isso\nque todos os testes foram aprovados nesta versão também\nb) Não está correto. Esse princípio se refere à crença errônea de que\napenas encontrar e corrigir muitos defeitos garantirão o sucesso de\num sistema\nc) Não está correto. Este princípio diz que um pequeno número de\ncomponentes geralmente contém a maioria dos defeitos\nd) Não está correto. Este princípio afirma que testar todas as\ncombinações de entradas e pré-condições não é viável",
+      "k_level": "FL-1.3.1",
+      "points": "K2"
+    },
+    "4": {
+      "answer": "b",
+      "lo": "a) Não está correto. Estimar o esforço de teste faz parte do\nplanejamento de testes\nb) Está correto. Este é um exemplo de definição de condições de\nteste, que faz parte da análise de teste\nc) Não está correto. Usar técnicas de teste para derivar itens de\ncobertura faz parte do projeto de teste\nd) Não está correto. Relatar defeitos encontrados durante o teste\ndinâmico faz parte da execução do teste",
+      "k_level": "FL-1.4.1",
+      "points": "K2"
+    },
+    "5": {
+      "answer": "b",
+      "lo": "i. É verdade. O SDLC influencia a abordagem de teste\nii. É falso. O número de defeitos detectados em projetos anteriores\npode ter alguma influência, mas isso não é tão significativo\nquanto i, iii e iv\niii. É verdade. Os riscos identificados no produto são um dos fatores\nmais importantes que influenciam a abordagem de teste\niv. É verdade. Os requisitos regulatórios são fatores importantes\nque influenciam a abordagem de teste\nv. Isso é falso. O ambiente de teste não tem influência significativa\nna abordagem de teste\nPortanto:\na) Não está correto\nb) Está correto\nc) Não está correto\nd) Não está correto",
+      "k_level": "FL-1.4.2",
+      "points": "K2"
+    },
+    "6": {
+      "answer": "a, e",
+      "lo": "a) Está correto. Isso é feito pelos testadores\nb) Não está correto. O backlog do produto é criado e mantido pelo\nproprietário do produto\nc) Não está correto. Isso é feito pela equipe de desenvolvimento\nd) Não está correto. Esta é uma função gerencial\ne) Está correto. Isso é feito pelos testadores, uma vez que se trata de\numa tarefa técnica realizada como parte de uma análise de teste.",
+      "k_level": "FL-1.4.5",
+      "points": "K2"
+    },
+    "7": {
+      "answer": "b",
+      "lo": "i. É verdade. Ter conhecimento do domínio é uma habilidade\nimportante para um testador\nii. É falso. Essa é uma tarefa do analista de negócios em conjunto\ncom o representante da empresa\niii. É verdade. Ser um bom colaborador em equipe é uma habilidade\nimportante\niv. É falso. Planejar e organizar o trabalho da equipe é uma tarefa\ndo gerente de testes ou, principalmente em um projeto de\ndesenvolvimento de software ágil, de toda a equipe e não\napenas do testador\nv. É verdade. O pensamento crítico é uma das habilidades mais\nimportantes dos testadores\nPortanto:\na) Não está correto\nb) Está correto\nc) Não está correto\nd) Não está correto",
+      "k_level": "FL-1.5.1",
+      "points": "K2"
+    },
+    "8": {
+      "answer": "d",
+      "lo": "a) Não está correto. A abordagem de automação de testes é definida\npelos testadores com a ajuda dos desenvolvedores e\nrepresentantes da área de negócios\nb) Não está correto. A estratégia de teste é decidida em colaboração\ncom os desenvolvedores\nc) Não está correto. Testadores, desenvolvedores e representantes da\nempresa fazem parte da abordagem de equipe como um todo\nd) Está correto. Os testadores trabalharão em estreita colaboração\ncom os representantes da área de negócios para garantir que os\nníveis de qualidade desejados sejam alcançados. Isso inclui apoiá-\nlos e colaborar com eles para ajudá-los a criar testes de aceite\nadequados",
+      "k_level": "FL-1.5.2",
+      "points": "K1"
+    },
+    "9": {
+      "answer": "d",
+      "lo": "a) Não está correto\nb) Não está correto\nc) Não está correto\nd) Está correto. Esta regra se aplica a todos os modelos SDLC",
+      "k_level": "FL-2.1.2",
+      "points": "K1"
+    },
+    "10": {
+      "answer": "c",
+      "lo": "a) Não está correto. É mais frequentemente usado no\ndesenvolvimento orientado a comportamento (BDD)\nb) Não está correto. Trata-se da descrição do desenvolvimento\norientado por testes (TDD)\nc) Está correto. No desenvolvimento orientado por testes de aceite\n(ATDD), os testes são escritos a partir de critérios de aceite como\nparte do processo de design\nd) Não está correto. É usado no BDD",
+      "k_level": "FL-2.1.3",
+      "points": "K1"
+    },
+    "11": {
+      "answer": "d",
+      "lo": "a) Não está correto. A revisão antecipada é um exemplo da\nabordagem shift-left\nb) Não está correto. O TDD é um exemplo da abordagem shift-left\nc) Não está correto. Testes não funcionais antecipados são um\nexemplo da abordagem shift-left\nd) Está correto. Os scripts de teste devem estar sujeitos ao\ngerenciamento de configuração, portanto, não faz sentido criar os\nscripts de teste antes que esse processo seja configurado",
+      "k_level": "FL-2.1.5",
+      "points": "K2"
+    },
+    "12": {
+      "answer": "c",
+      "lo": "a) Não está correto. As retrospectivas são mais úteis para identificar\noportunidades de melhoria e têm pouca importância para os\nclientes\nb) Não está correto. As retrospectivas não têm como objetivo coletar\nfeedback sobre o produto, mas sobre o processo. Além disso, as\nretrospectivas são atividades internas da equipe e não devem\nincluir representantes dos usuários finais\nc) Está correto. Retrospectivas realizadas regularmente, quando\nacompanhadas de atividades de acompanhamento adequadas, são\nfundamentais para a melhoria contínua do desenvolvimento e dos\ntestes\nd) Não está correto. Coragem e respeito são valores da Programação\nExtrema e não estão intimamente relacionados às retrospectivas",
+      "k_level": "FL-2.1.6",
+      "points": "K2"
+    },
+    "13": {
+      "answer": "a",
+      "lo": "Considerando:\n• A base para os testes de aceite são as necessidades de\nnegócios do usuário (1D)\n• A comunicação entre componentes é testada durante os\ntestes de integração de componentes (2B)\n• Falhas na lógica podem ser detectadas durante os testes de\ncomponentes (3A)\n• As regras de negócios são a base para os testes de sistema\n(4C)\nPortanto:\na) Está correto\nb) Não está correto\nc) Não está correto\nd) Não está correto",
+      "k_level": "FL-2.2.1",
+      "points": "K2"
+    },
+    "14": {
+      "answer": "b",
+      "lo": "Como o TC1 e o TC3 falharam na Execução 1 (ou seja, nos testes (1) e\n(3)), os testes (4) e (6) são testes de confirmação.\nComo TC2 e TC3 falharam na Execução 2 (ou seja, nos testes (5) e\n(6)), os testes (8) e (9) também são testes de confirmação.\nO TC2 foi aprovado na Execução 1 (ou seja, teste (2)), portanto, o teste\n(5) é um teste de regressão.\nO TC1 foi aprovado na Execução 2 (ou seja, teste (4)), portanto, o teste\n(7) também é um teste de regressão.\nPortanto:\na) Não está correto\nb) Está correto\nc) Não está correto\nd) Não está correto",
+      "k_level": "FL-2.2.3",
+      "points": "K2"
+    },
+    "15": {
+      "answer": "a",
+      "lo": "a) Está correto. O gerenciamento de defeitos não é menos\ndispendioso. Encontrar e corrigir defeitos em fases posteriores do\nSDLC é mais caro\nb) Não está correto. Essa é uma vantagem do teste estático\nc) Não está correto. Essa é uma vantagem do teste estático\nd) Não está correto. Essa é uma vantagem do teste estático",
+      "k_level": "FL-3.1.2",
+      "points": "K2"
+    },
+    "16": {
+      "answer": "d",
+      "lo": "a) Não está correto. O feedback pode melhorar o processo de teste,\nmas se o objetivo for apenas melhorar projetos futuros, o feedback\nnão precisa ser dado antecipadamente ou com frequência\nb) Não está correto. O feedback não é usado para priorizar requisitos\nc) Não está correto. Não existe uma única maneira recomendada de\nmedir a qualidade das alterações. Além disso, esse não é um dos\nbenefícios do feedback precoce mencionados na seção 3.2.1\nd) Está correto. O feedback precoce e frequente pode evitar mal-\nentendidos sobre os requisitos",
+      "k_level": "FL-3.2.1",
+      "points": "K1"
+    },
+    "17": {
+      "answer": "b",
+      "lo": "Considerando os atributos:\n• Especificado para walkthroughs, revisões técnicas e inspeções;\nportanto, as revisões realizadas não podem ser revisões\ninformais\n• O propósito de avaliar a qualidade é um dos objetivos mais\nimportantes de uma revisão\n• Isso não é permitido em inspeções e normalmente não é feito\nem revisões técnicas. É necessário um moderador em\nwalkthroughs e isso é permitido em revisões informais\n• Todos os tipos de revisões podem incluir preparação individual\n(mesmo as revisões informais)\n• Todos os tipos de revisões podem gerar um relatório de revisão,\nembora as revisões informais não exijam documentação\nPortanto:\na) Não está correto\nb) Está correto\nc) Não está correto\nd) Não está correto",
+      "k_level": "FL-3.2.4",
+      "points": "K2"
+    },
+    "18": {
+      "answer": "d",
+      "lo": "a) Não está correto. Tempo adequado para os indivíduos é um fator\nde sucesso\nb) Não está correto. Dividir os produtos de trabalho em pequenas\npartes adequadas é um fator de sucesso\nc) Não está correto. Evitar comportamentos que possam indicar tédio,\nexasperação, etc. é um fator de sucesso\nd) Está correto. Durante as revisões, é possível encontrar defeitos,\nnão falhas",
+      "k_level": "FL-3.2.5",
+      "points": "K1"
+    },
+    "19": {
+      "answer": "c",
+      "lo": "a) Não está correto. Essa é uma característica comum das técnicas de\nteste caixa-branca. As condições de teste, os casos de teste e os\ndados de teste são derivados de uma base de teste que pode\nincluir código, arquitetura de software, projeto detalhado ou\nqualquer outra fonte de informação relativa à estrutura do software.\nb) Não está correto. Essa é uma característica comum das técnicas de\nteste caixa-branca. A cobertura é medida com base nos itens\ntestados dentro de uma estrutura selecionada e na técnica de teste\naplicada à base de teste\nc) Está correto. Essa é uma característica comum das técnicas de\nteste baseadas em experiência. Esse conhecimento e experiência\nincluem o uso esperado do software, seu ambiente, defeitos\nprováveis e a distribuição desses defeitos, que são usados para\ndefinir os testes\nd) Não está correto. Essa é uma característica comum das técnicas de\nteste de caixa preta. Casos de teste podem ser usados para\ndetectar lacunas nos requisitos e na implementação dos requisitos,\nbem como desvios em relação aos requisitos",
+      "k_level": "FL-4.1.1",
+      "points": "K2"
+    },
+    "20": {
+      "answer": "b",
+      "lo": "A situação apresentada na questão é descrita no programa como\ncobertura de “cada opção”.\n“Jardim pequeno” e “jardim grande” só podem estar associados a “piso\ntérreo”, portanto, precisamos de dois casos de teste com “piso térreo”\nque cubram essas duas partições do “tipo jardim”.\nPrecisamos de mais dois casos de teste para cobrir as outras duas\ndivisões de “andar”. A divisão restante de “tipo de jardim”, “sem jardim”,\né coberta por esses testes.\nPrecisamos de um total de quatro casos de teste:\nTC1 (piso térreo, jardim pequeno)\nTC2 (piso térreo, jardim grande)\nTC3 (primeiro andar, sem jardim)\nTC4 (segundo andar ou superior, sem jardim)\nPortanto:\na) Não está correto\nb) Está correto\nc) Não está correto\nd) Não está correto",
+      "k_level": "FL-4.2.1",
+      "points": "K3"
+    },
+    "21": {
+      "answer": "a",
+      "lo": "Existem 12 valores de limite para os valores finais: 0, 50, 51, 60, 61, 70,\n71, 80, 81, 90, 91 e 100.\nOs casos de teste abrangem seis deles (TC1 – 91, TC2 – 50, TC3 – 81,\nTC4 – 60, TC5 – 70 e TC7 – 51).\nPortanto, os casos de teste cobrem 6/12 = 50%.\nPortanto:\na) Está correto\nb) Não está correto\nc) Não está correto\nd) Não está correto",
+      "k_level": "FL-4.2.2",
+      "points": "K3"
+    },
+    "22": {
+      "answer": "d",
+      "lo": "a) Não está correto. Um membro que não tenha perdido nenhum\nprazo pode receber um desconto e uma camiseta de brinde após\n15 aluguéis de bicicleta\nb) Não está correto. Um membro que não tenha perdido nenhum\nprazo pode receber um desconto, mas não uma camiseta de\nbrinde, até ter alugado uma bicicleta 15 vezes\nc) Não está correto. Não-membros não podem receber um desconto,\nmesmo que ainda não tenham perdido um prazo\nd) Está correto. Não há desconto para um não-membro que também\ntenha perdido um prazo, mas apenas os membros podem receber\numa camiseta de presente. Portanto, a ação não está correta",
+      "k_level": "FL-4.2.3",
+      "points": "K3"
+    },
+    "23": {
+      "answer": "d",
+      "lo": "As transições “teste” e “erro” não podem ocorrer em um único caso de\nteste.\nIsso vale para as duas transições “concluído”.\nIsso significa que precisamos de pelo menos três casos de teste para\nobter cobertura de transição. Por exemplo:\nTC1: teste, concluído\nTC2: execução, erro, concluído\nTC3: execução, pausa, retomada, pausa, concluído\nPortanto:\na) Não está correto\nb) Não está correto\nc) Não está correto\nd) Está correto",
+      "k_level": "FL-4.2.4",
+      "points": "K3"
+    },
+    "24": {
+      "answer": "a",
+      "lo": "a) Está correto. Como é alcançada uma cobertura de 100% das\ninstruções, todas as instruções, incluindo aquelas com defeitos,\ndevem ter sido executadas e avaliadas pelo menos uma vez\nb) Não está correto. A cobertura depende do que é testado, não do\nnúmero de casos de teste. Por exemplo, para o código “if (x==0)\ny=1”, um caso de teste (x=0) alcança 100% de cobertura de\ninstruções, mas dois casos de teste (x=1) e (x=2) juntos alcançam\napenas 50% de cobertura de instruções\nc) Não está correto. Se houver um loop no código, pode haver um\nnúmero infinito de caminhos possíveis, portanto, não é possível\nexecutar todos os caminhos possíveis no código\nd) Não está correto. Testes exaustivos não são possíveis (consulte a\nseção sobre os sete princípios de teste no programa do curso). Por\nexemplo, para o código “input x; print x”, qualquer teste único com x\narbitrário alcança 100% de cobertura de instrução, mas cobre\napenas um valor de entrada",
+      "k_level": "FL-4.3.1",
+      "points": "K2"
+    },
+    "25": {
+      "answer": "d",
+      "lo": "a) Não está correto. O ponto forte fundamental das técnicas de teste\ncaixa-branca é que toda a implementação do software é levada em\nconsideração durante os testes\nb) Não está correto. As medidas de cobertura de caixa aberta\nfornecem uma avaliação objetiva da cobertura e oferecem as\ninformações necessárias para permitir a geração de testes\nadicionais para aumentar essa cobertura\nc) Não está correto. As técnicas de teste de caixa aberta podem ser\nusadas para realizar revisões (testes estáticos)\nd) Está correto. Essa é a fraqueza das técnicas de teste de caixa\naberta. Elas não são capazes de identificar a implementação\nausente, pois se baseiam exclusivamente na estrutura do objeto de\nteste, e não na especificação de requisitos",
+      "k_level": "FL-4.3.3",
+      "points": "K2"
+    },
+    "26": {
+      "answer": "a",
+      "lo": "a) Está correto. O conceito básico por trás da adivinhação de erros é\nque o testador tenta adivinhar quais erros podem ter sido cometidos\npelo desenvolvedor e quais defeitos podem estar presentes no\nobjeto de teste com base na experiência anterior (e, às vezes, em\nlistas de verificação)\nb) Não está correto. Embora um testador que já foi desenvolvedor\npossa usar sua experiência pessoal para ajudá-lo ao realizar a\nadivinhação de erros, a técnica de teste não se baseia no\nconhecimento prévio de desenvolvimento\nc) Não está correto. A adivinhação de erros não é uma técnica de\nusabilidade para adivinhar como os usuários podem falhar na\ninteração com o objeto de teste\nd) Não está correto. Reproduzir a tarefa de desenvolvimento\napresenta várias falhas que a tornam impraticável, como a\nnecessidade de o testador possuir habilidades equivalentes às do\ndesenvolvedor e o tempo necessário para realizar o\ndesenvolvimento. Isso não é adivinhação de erros",
+      "k_level": "FL-4.4.1",
+      "points": "K2"
+    },
+    "27": {
+      "answer": "c",
+      "lo": "a) Não está correto. Este é um novo produto. Provavelmente você\nainda não tem uma lista de verificação e as condições de teste\npodem não ser conhecidas devido à falta de requisitos\nb) Não está correto. Trata-se de um produto novo. Provavelmente\nvocê não tem informações suficientes para fazer suposições\ncorretas sobre os erros\nc) Está correto. O teste exploratório é mais útil quando há poucas\nespecificações conhecidas e/ou há um prazo apertado para os\ntestes\nd) Não está correto. O teste de ramificação é demorado, e sua\ngerência está solicitando alguns resultados de teste agora. Além\ndisso, o teste de ramificação não envolve conhecimento de domínio",
+      "k_level": "FL-4.4.2",
+      "points": "K2"
+    },
+    "28": {
+      "answer": "b",
+      "lo": "a) Não está correto. As retrospectivas são usadas para registrar lições\naprendidas e melhorar o processo de desenvolvimento e teste, não\npara documentar os critérios de aceite\nb) Está correto. Essa é a maneira padrão de documentar os critérios\nde aceite\nc) Não está correto. A comunicação verbal não permite documentar\nfisicamente os critérios de aceite como parte de uma user story (o\naspecto “cartão” no modelo dos 3Cs)\nd) Não está correto. Os critérios de aceite estão relacionados a uma\nhistória de usuário, não a um plano de teste. Além disso, os\ncritérios de aceite são as condições que devem ser cumpridas para\ndecidir se a história de usuário está completa. Riscos não são tais\ncondições",
+      "k_level": "FL-4.5.2",
+      "points": "K2"
+    },
+    "29": {
+      "answer": "a",
+      "lo": "a) Está correto. Este teste abrange dois critérios de aceite: um sobre a\nedição do documento e outro sobre o salvamento das alterações\nb) Não está correto. Os critérios de aceite abrangem as atividades do\neditor, não as atividades do proprietário do conteúdo\nc) Isso não está correto. Agendar a publicação do conteúdo editado\npode ser um recurso interessante, mas não está previsto nos\ncritérios de aceite\nd) Não está correto. Os critérios de aceite referem-se à reatribuição de\num editor para o proprietário do conteúdo, e não para outro editor",
+      "k_level": "FL-4.5.3",
+      "points": "K3"
+    },
+    "30": {
+      "answer": "c",
+      "lo": "a) Não está correto. As prioridades das histórias de usuário são\ndeterminadas pelo representante da empresa em conjunto com a\nequipe de desenvolvimento\nb) Não está correto. Os testadores se concentram tanto nos aspectos\nfuncionais quanto nos não funcionais do sistema a ser testado\nc) Está correto. De acordo com o programa, essa é uma das maneiras\npelas quais os testadores agregam valor ao planejamento de\niteração e lançamento\nd) Não está correto. O projeto de testes antecipado não faz parte do\nplanejamento de lançamento. O projeto de testes antecipado não\ngarante automaticamente o lançamento de software de qualidade",
+      "k_level": "FL-5.1.2",
+      "points": "K1"
+    },
+    "31": {
+      "answer": "c, e",
+      "lo": "a) Não está correto. A prontidão do ambiente de teste é um critério de\ndisponibilidade de recursos; portanto, pertence aos critérios de\nentrada\nb) Não está correto. Este é um critério de disponibilidade de recursos;\nportanto, pertence aos critérios de entrada\nc) Está correto. A densidade estimada de defeitos é uma medida de\ndiligência; portanto, pertence aos critérios de saída.\nd) Não está correto. Requisitos traduzidos para um determinado\nformato resultam em requisitos testáveis; portanto, pertence aos\ncritérios de entrada\ne) Está correto. A automação dos testes de regressão é um critério de\nconclusão; portanto, pertence aos critérios de saída",
+      "k_level": "FL-5.1.3",
+      "points": "K2"
+    },
+    "32": {
+      "answer": "d",
+      "lo": "Na técnica de estimativa de três pontos:\nE = (otimista + 4*mais provável + pessimista)/6\nE = (2 + (4 × 11) + 14)/6 = 10\nPortanto:\na) Não está correto\nb) Não está correto\nc) Não está correto\nd) Está correto",
+      "k_level": "FL-5.1.4",
+      "points": "K3"
+    },
+    "33": {
+      "answer": "a",
+      "lo": "O teste TC 001 deve vir primeiro, seguido pelo TC 002, para satisfazer\nas dependências. Em seguida, o TC 003 para satisfazer a prioridade e,\ndepois, o TC 004, seguido pelo TC 005.\nPortanto:\na) Está correto\nb) Não está correto\nc) Não está correto\nd) Não está correto",
+      "k_level": "FL-5.1.5",
+      "points": "K3"
+    },
+    "34": {
+      "answer": "a",
+      "lo": "Considerando:\n• O teste de usabilidade está no terceiro trimestre (1 – C)\n• O teste de componentes está no primeiro trimestre (2 – A)\n• O teste funcional está no segundo trimestre (3 – B)\n• O teste de confiabilidade está no Q4 (4 – D)\nPortanto:\na) Está correto\nb) Não está correto\nc) Não está correto\nd) Não está correto",
+      "k_level": "FL-5.1.7",
+      "points": "K2"
+    },
+    "35": {
+      "answer": "c",
+      "lo": "a) Não está correto. Não aceitamos o risco; são propostas ações\nconcretas\nb) Não está correto. Não são propostos planos de contingência\nc) Está correto. As ações propostas estão relacionadas a testes, o que\né uma forma de mitigação de risco\nd) Não está correto. O risco não é transferido, mas mitigado",
+      "k_level": "FL-5.2.4",
+      "points": "K2"
+    },
+    "36": {
+      "answer": "d",
+      "lo": "a) Não está correto. Os critérios de aceite são as condições utilizadas\npara decidir se a história de usuário está pronta. Eles não podem\nmostrar o andamento do trabalho\nb) Não está correto. Os relatórios de defeitos informam sobre os\ndefeitos. Eles não mostram o andamento do trabalho\nc) Não está correto. O relatório de conclusão de testes pode ser\ncriado após o término da iteração, portanto, não mostrará o\nprogresso continuamente dentro de uma iteração\nd) Está correto. Gráficos de burndown são uma representação gráfica\ndo trabalho restante em relação ao tempo restante. Eles são\natualizados diariamente, portanto, podem mostrar continuamente o\nandamento do trabalho",
+      "k_level": "FL-5.3.3",
+      "points": "K2"
+    },
+    "37": {
+      "answer": "c",
+      "lo": "a) Não está correto. Rastreabilidade é a relação entre dois ou mais\nprodutos de trabalho, não entre diferentes versões do mesmo\nproduto de trabalho\nb) Não está correto. O teste de manutenção trata de testar alterações;\nnão está intimamente relacionado ao controle de versões\nc) Está correto. Para dar suporte aos testes, o gerenciamento de\nconfiguração pode envolver o controle de versão de todos os itens\nde teste\nd) Não está correto. A engenharia de requisitos é a elicitação,\ndocumentação e gerenciamento de requisitos; não está\nintimamente relacionada ao controle de versões de scripts de teste",
+      "k_level": "FL-5.4.1",
+      "points": "K2"
+    },
+    "38": {
+      "answer": "c",
+      "lo": "a) Não está correto. O resultado esperado é “o aplicativo deve aceitar\na entrada fornecida e criar o usuário”. O resultado real é “O\naplicativo trava após inserir “Entrada de teste. $ä””.\nb) Não está correto. Há uma referência ao caso de teste e ao requisito\nrelacionado, e afirma-se que o defeito foi rejeitado. Além disso, o\nstatus do defeito não seria muito útil para os desenvolvedores\nc) Está correto. Não sabemos em qual ambiente de teste a anomalia\nfoi detectada, e também não sabemos qual aplicativo (e sua\nversão) foi afetado\nd) Isso não está correto. O relatório de defeito indica que a anomalia é\nurgente, que se trata de um problema global (ou seja, muitas, se\nnão todas, as contas de administração de testes estão afetadas) e\nafirma que o impacto é alto para os stakeholders da empresa",
+      "k_level": "FL-5.5.1",
+      "points": "K3"
+    },
+    "39": {
+      "answer": "c",
+      "lo": "a) Não está correto. O monitoramento de testes envolve a verificação\ncontínua de todas as atividades e a comparação do progresso real\ncom o plano de testes. O controle de testes envolve tomar as\nmedidas necessárias para cumprir os objetivos de teste do plano de\ntestes. Nenhum dado de teste é preparado durante essas\natividades.\nb) Não está correto. A análise de testes inclui a análise da base de\ntestes para identificar as condições de teste e priorizá-las. Não são\npreparados dados de teste durante esta atividade.\nc) Está correto. O projeto e a implementação de testes podem incluir a\nidentificação, criação ou aquisição das ferramentas de teste\nnecessárias para a execução dos testes (por exemplo, dados de\nteste).\nd) Não está correto. As atividades de conclusão de teste ocorrem em\nmarcos do projeto (por exemplo, lançamento, fim de iteração,\nconclusão do nível de teste), portanto, é tarde demais para preparar\ndados de teste.",
+      "k_level": "FL-6.1.1",
+      "points": "K2"
+    },
+    "40": {
+      "answer": "b",
+      "lo": "a) Não está correto. A automação de testes não introduz regressões\ndesconhecidas na produção\nb) Está correto. A alocação incorreta de esforços para manter o\nsoftware de teste é um risco\nc) Não está correto. As ferramentas de teste devem ser selecionadas\nde forma que elas e seus recursos de teste sejam confiáveis\nd) Não está correto. O objetivo principal da automação de testes é\nreduzir os testes manuais. Portanto, isso é um benefício, não um\nrisco",
+      "k_level": "FL-6.2.1",
+      "points": "K1"
+    }
+  },
+  "exam_b_answers": {
+    "1": {
+      "answer": "d",
+      "lo": "FL-1.2.1",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "2": {
+      "answer": "b",
+      "lo": "FL-1.2.2",
+      "k_level": "K1",
+      "points": "1"
+    },
+    "3": {
+      "answer": "d",
+      "lo": "FL-1.3.1",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "4": {
+      "answer": "um",
+      "lo": "FL-1.4.1",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "5": {
+      "answer": "c",
+      "lo": "FL-1.4.2",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "6": {
+      "answer": "b",
+      "lo": "FL-1.4.4",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "7": {
+      "answer": "b",
+      "lo": "FL-1.5.1",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "8": {
+      "answer": "d",
+      "lo": "FL-1.5.2",
+      "k_level": "K1",
+      "points": "1"
+    },
+    "9": {
+      "answer": "b",
+      "lo": "FL-2.1.1",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "10": {
+      "answer": "b",
+      "lo": "FL-2.1.2",
+      "k_level": "K1",
+      "points": "1"
+    },
+    "11": {
+      "answer": "um",
+      "lo": "FL-2.1.3",
+      "k_level": "K1",
+      "points": "1"
+    },
+    "12": {
+      "answer": "b",
+      "lo": "FL-2.1.4",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "13": {
+      "answer": "um",
+      "lo": "FL-2.2.1",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "14": {
+      "answer": "d",
+      "lo": "FL-2.2.3",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "15": {
+      "answer": "b",
+      "lo": "FL-3.1.3",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "16": {
+      "answer": "c",
+      "lo": "FL-3.2.1",
+      "k_level": "K1",
+      "points": "1"
+    },
+    "17": {
+      "answer": "d",
+      "lo": "FL-3.2.2",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "18": {
+      "answer": "c",
+      "lo": "FL-3.2.3",
+      "k_level": "K1",
+      "points": "1"
+    },
+    "19": {
+      "answer": "d",
+      "lo": "FL-4.1.1",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "20": {
+      "answer": "um",
+      "lo": "FL-4.2.1",
+      "k_level": "K3",
+      "points": "1"
+    },
+    "21": {
+      "answer": "d",
+      "lo": "FL-4.2.2",
+      "k_level": "K3",
+      "points": "1"
+    },
+    "22": {
+      "answer": "b",
+      "lo": "FL-4.2.3",
+      "k_level": "K3",
+      "points": "1"
+    },
+    "23": {
+      "answer": "c",
+      "lo": "FL-4.2.4",
+      "k_level": "K3",
+      "points": "1"
+    },
+    "24": {
+      "answer": "b",
+      "lo": "FL-4.3.1",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "25": {
+      "answer": "c",
+      "lo": "FL-4.3.2",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "26": {
+      "answer": "a, e",
+      "lo": "FL-4.4.2",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "27": {
+      "answer": "d",
+      "lo": "FL-4.4.3",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "28": {
+      "answer": "b",
+      "lo": "FL-4.5.2",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "29": {
+      "answer": "d",
+      "lo": "FL-4.5.3",
+      "k_level": "K3",
+      "points": "1"
+    },
+    "30": {
+      "answer": "um",
+      "lo": "FL-5.1.3",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "31": {
+      "answer": "b",
+      "lo": "FL-5.1.4",
+      "k_level": "K3",
+      "points": "1"
+    },
+    "32": {
+      "answer": "b",
+      "lo": "FL-5.1.5",
+      "k_level": "K3",
+      "points": "1"
+    },
+    "33": {
+      "answer": "d",
+      "lo": "FL-5.1.7",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "34": {
+      "answer": "c",
+      "lo": "FL-5.2.4",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "35": {
+      "answer": "um",
+      "lo": "FL-5.3.1",
+      "k_level": "K1",
+      "points": "1"
+    },
+    "36": {
+      "answer": "um",
+      "lo": "FL-5.3.3",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "37": {
+      "answer": "um",
+      "lo": "FL-5.4.1",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "38": {
+      "answer": "b",
+      "lo": "FL-5.5.1",
+      "k_level": "K3",
+      "points": "1"
+    },
+    "39": {
+      "answer": "c",
+      "lo": "FL-6.1.1",
+      "k_level": "K2",
+      "points": "1"
+    },
+    "40": {
+      "answer": "um",
+      "lo": "FL-6.2.1",
+      "k_level": "K1",
+      "points": "1"
+    }
+  }
+}

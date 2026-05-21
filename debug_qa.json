@@ -1,0 +1,164 @@
+{
+  "exam_a_questions": {
+    "1": {
+      "text": "Testes de usabilidade",
+      "opts": {}
+    },
+    "2": {
+      "text": "Teste de componentes",
+      "opts": {}
+    },
+    "3": {
+      "text": "Testes funcionais",
+      "opts": {}
+    },
+    "4": {
+      "text": "Testes de confiabilidade\ndesenvolvimento\ndesenvolvimento\nComo as seguintes categorias de teste se relacionam com os quadrantes de teste ágil?\na) 1C, 2A, 3B, 4D\nb) 1D, 2A, 3C, 4B\nc) 1C, 2B, 3D, 4A\nd) 1D, 2B, 3C, 4A\nSelecione UMA opção.\nQuestão 35 (1 ponto)\nDurante a análise de risco, o seguinte risco foi identificado e avaliado:\n• Risco: O tempo de resposta é muito longo para gerar um relatório.\n• Probabilidade de risco: média; impacto do risco: alto\n• Resposta ao risco:\no Uma equipe de testes independente realiza testes de eficiência de desempenho\ndurante os testes do sistema.\no Uma amostra selecionada de usuários finais realiza testes alfa e beta antes do\nlançamento.\nQue medidas se propõem tomar em resposta a este risco analisado?\na) aceite do risco\nb) Plano de contingência\nc) Mitigação de riscos\nd) Transferência de risco\nSelecione UMA opção.\nQuestão 36 (1 ponto)\nQual produto de trabalho pode ser usado por uma equipe ágil para mostrar a quantidade de\ntrabalho que foi concluída e a quantidade total de trabalho restante para uma determinada\niteração?\na) Critérios de aceite\nb) Relatório de defeitos\nc) Relatório de conclusão do teste\nd) Gráfico de Burndown\nSelecione UMA opção .\nVersão 1.7 Página 19 de 29 LiberarApril 1, 2025\n© Conselho Internacional de Qualificações em Teste de\nSoftware\nCertified Tester, Foundation Level\nSet A\nExemplo de Exame – Questões\nQuestão 37 (1 ponto)\nVocê precisa atualizar um dos scripts de teste automatizados para atender a um novo requisito.\nQual processo indica que você deve criar uma versão do script de teste no repositório de testes?\na) Gestão de rastreabilidade\nb) Testes de manutenção\nc) Gerenciamento de configuração\nd) Engenharia de requisitos\nSelecione UMA opção.\nQuestão 38 (1 ponto)\nVocê recebeu o seguinte relatório de defeito dos desenvolvedores, informando que a anomalia\ndescrita neste relatório de teste não é reproduzível.\nO aplicativo trava.\n03/05/2022 – John Doe – Rejeitado\nO aplicativo trava após inserir “Entrada de teste: $ä” no campo Nome na tela de criação de\nnovo usuário. Tentei sair e entrar com a conta test_admin01, mas o problema persiste. Tentei\ncom outras contas de administrador de teste, e o problema continua. Nenhuma mensagem de\nerro é exibida; o log (em anexo) contém a notificação de erro fatal. De acordo com o caso de\nteste TC-1305, o aplicativo deveria aceitar a entrada fornecida e criar o usuário. Por favor,\ncorrijam isso com alta prioridade, pois essa funcionalidade está relacionada ao REQ-0012, que\né um novo requisito crítico para o negócio.\nQue informações essenciais estão FALTANDO neste relatório de testes e que teriam sido úteis\npara os desenvolvedores?\na) Resultado esperado e resultado real\nb) Referências e estado do defeito\nc) Ambiente de teste e item de teste\nd) Prioridade e gravidade\nSelecione UMA opção.\nQuestão 39 (1 ponto)\nQue atividade de teste uma ferramenta de preparação de dados suporta?\na) Monitoramento e controle de testes\nb) Análise de teste\nc) Projeto e implementação de testes\nd) Conclusão do teste\nSelecione UMA opção.\nQuestão 40 (1 ponto)\nQual item identifica corretamente um risco potencial da execução de testes automatizados?\na) Isso pode introduzir regressões desconhecidas na produção.\nb) Pode ser que não estejam sendo alocados esforços suficientes para a manutenção do\nsoftware de teste.\nc) Pode não ser suficientemente confiável em ferramentas e softwares de teste associados.\nd) Isso pode reduzir o tempo alocado para testes manuais.\nSelecione UMA opção.\nVersão 1.7 Página 20 de 29 LiberarApril 1, 2025\n© Conselho Internacional de Qualificações em Teste de\nSoftware\nCertified Tester, Foundation Level\nSet A\nExemplo de Exame – Questões\nApêndice: Perguntas adicionais\nQuestão #A1 (1 ponto)\nVocê recebeu uma tarefa. Analisar e corrigir as causas de falhas em um novo sistema a ser\nlançado.\nQue atividade você está realizando?\na) Depuração\nb) Teste de software\nc) Levantamento de requisitos\nd) Gestão de defeitos\nSelecione UMA opção.\nQuestão #A2 (1 ponto)\nEm muitas empresas de software, o departamento de testes é chamado de departamento de\nGarantia da Qualidade (QA). Essa frase está correta ou não? Por quê?\na) Está correto. Testes e controle de qualidade significam exatamente a mesma coisa.\nb) Está correto. Esses termos podem ser usados indistintamente, pois tanto os testes quanto\no controle de qualidade concentram suas atividades nas mesmas questões de qualidade.\nc) Não está correto. Testar é algo mais abrangente; os testes incluem todas as atividades\nrelacionadas à qualidade. A Garantia da Qualidade (QA) concentra-se nos processos\nrelacionados à qualidade.\nd) Não está correto. A Garantia da Qualidade (QA) concentra-se em processos relacionados\nà qualidade, enquanto os testes concentram-se em demonstrar que um componente ou\nsistema é adequado à sua finalidade e em detectar defeitos.\nSelecione UMA opção.\nQuestão #A3 (1 ponto)\nO toque de um telefone em uma cabine vizinha distrai um programador, levando-o a programar\nincorretamente a lógica que verifica o limite superior de uma variável de entrada. Posteriormente,\ndurante os testes do sistema, um testador percebe que esse campo de entrada aceita valores\ninválidos.\nQual das seguintes opções descreve corretamente um limite superior codificado incorretamente?\na) A causa raiz\nb) Um fracasso\nc) Um erro\nd) Um defeito\nSelecione UMA opção.\nVersão 1.7 Página 21 de 29 LiberarApril 1, 2025\n© Conselho Internacional de Qualificações em Teste de\nSoftware\nCertified Tester, Foundation Level\nSet A\nExemplo de Exame – Questões\nQuestão #A4 (1 ponto)\nConsidere o seguinte software de teste.\nCarta de Teste 04.018 Duração da sessão: 1 hora\nExplorar: Página de inscrição\nCom: Diferentes conjuntos de dados de entrada incorretos\nPara descobrir: Defeitos relacionados à aceite do processo de registro com entrada incorreta.\nQual atividade de teste gera esse software de teste como saída?\na) Planejamento de testes\nb) Monitoramento e controle de testes\nc) Análise de teste\nd) Projeto de teste\nSelecione UMA opção.\nQuestão #A5 (1 ponto)\nQual das seguintes opções é o MELHOR exemplo de como a rastreabilidade auxilia nos testes?\na) Realizar a análise de impacto de uma mudança fornecerá informações sobre a conclusão\ndos testes.\nb) A análise da rastreabilidade entre os casos de teste e os resultados dos testes fornecerá\ninformações sobre o nível estimado de risco residual.\nc) Realizar a análise de impacto de uma mudança ajudará a selecionar os casos de teste\ncorretos para testes de regressão.\nd) Analisar a rastreabilidade entre a base de testes, os objetos de teste e os casos de teste\najudará na seleção de dados de teste para atingir a cobertura esperada do objeto de teste.\nSelecione UMA opção.\nQuestão #A6 (1 ponto)\nQual das seguintes opções melhor explica um benefício da independência dos testes?\na) A utilização de uma equipe de testes independente permite que a gestão do projeto atribua\na responsabilidade pela qualidade do produto à equipe de testes.\nb) Se for possível contratar uma equipe de testes externa à organização, isso trará benefícios\nclaros, pois essa equipe externa não será tão facilmente influenciada pelas preocupações\nda gestão de projetos com a entrega e pela necessidade de cumprir prazos rigorosos.\nc) Uma equipe de testes independente pode trabalhar separadamente dos desenvolvedores,\nnão precisa se distrair com mudanças nos requisitos do projeto e pode restringir a\ncomunicação com os desenvolvedores ao registro de defeitos por meio do sistema de\ngerenciamento de defeitos.\nd) Quando as especificações contêm ambiguidades e inconsistências, suposições são feitas\nsobre sua interpretação, e um testador independente pode ser útil para questionar essas\nsuposições e a interpretação feita pelo desenvolvedor.\nSelecione UMA opção.\nVersão 1.7 Página 22 de 29 LiberarApril 1, 2025\n© Conselho Internacional de Qualificações em Teste de\nSoftware\nCertified Tester, Foundation Level\nSet A\nExemplo de Exame – Questões\nQuestão # A7 (1 ponto)\nVocê trabalha como testador em uma equipe que segue o modelo V. Qual das seguintes\natividades PODE ser realizada nas fases iniciais do SDLC (Ciclo de Vida de Desenvolvimento de\nSoftware)?\na) Execução de teste dinâmico\nb) Teste estático\nc) Planejamento de testes\nd) Execução de testes de aceite\ne) Testes de manutenção\nSelecione DUAS opções.\nQuestão #A8 (1 ponto)\nQuais das seguintes opções representam vantagens do DevOps?\ni. Lançamento de produtos mais rápido e tempo de chegada ao mercado mais curto.\nii. Aumenta a necessidade de testes manuais repetitivos.\niii. Disponibilidade constante de software executável\niv. Redução no número de testes de regressão associados à refatoração de código.\nv. Configurar a estrutura de automação de testes é barato, já que tudo é automatizado.\na) i, ii, iv são vantagens\nb) iii, v são vantagens\nc) i, iii são vantagens\nd) ii, iv, v são vantagens\nSelecione UMA opção.\nQuestão #A9 (1 ponto)\nVocê trabalha como testador em um projeto de aplicativo móvel para pedidos de comida para um\nde seus clientes. O cliente lhe enviou uma lista de requisitos. Um deles, com alta prioridade, diz:\n“Em 95% dos casos, o pedido deve ser processado em menos de 10 segundos”.\nVocê criou um conjunto de casos de teste nos quais foram feitos vários pedidos aleatórios, o\ntempo de processamento foi medido e os resultados dos testes foram comparados com os\nrequisitos.\nQue tipo de teste você realizou?\na) Funcional, pois os casos de teste abrangem os requisitos de negócio do usuário para o\nsistema.\nb) Não funcionais, pois medem o desempenho do sistema.\nc) Funcional, porque os casos de teste interagem com a interface do usuário.\nd) Teste caixa-branca, pois precisamos conhecer a estrutura interna do programa para medir\no tempo de processamento do pedido.\nSelecione UMA opção.\nVersão 1.7 Página 23 de 29 LiberarApril 1, 2025\n© Conselho Internacional de Qualificações em Teste de\nSoftware\nCertified Tester, Foundation Level\nSet A\nExemplo de Exame – Questões\nQuestão # A10 (1 ponto)\nA estratégia de testes da sua organização sugere que, quando um sistema for desativado , a\nmigração de dados deverá ser testada. Em qual tipo de teste é MAIS provável que esse teste seja\nrealizado?\na) Testes de manutenção\nb) Teste de regressão\nc) Testes de confiabilidade\nd) Testes de integração\nSelecione UMA opção.\nQuestão #A11 (1 ponto)\nA seguir, apresentamos uma lista dos produtos de trabalho gerados no SDLC (Ciclo de Vida de\nDesenvolvimento de Software) .\ni. Requisitos de negócios\nii. Agendar\niii. Orçamento de teste\niv. Código executável de terceiros\nv. Histórias de usuário e seus critérios de aceite\nQuais deles podem ser revisados?\na) Os itens i e iv podem ser revisados.\nb) Os itens i, ii, iii e iv podem ser revisados.\nc) i, ii, iii e v podem ser revisados.\nd) iii, iv, v podem ser revisados\nSelecione UMA opção.\nQuestão #A12 (1 ponto)\nDecida quais das seguintes afirmações (iv) são verdadeiras para testes estáticos.\ni. Com esse teste, é mais fácil identificar comportamentos externos anormais.\nii. Discrepâncias em relação a um padrão de codificação são mais fáceis de encontrar\ncom este teste.\niii. Ele identifica falhas causadas por defeitos durante a execução do software.\niv. O objetivo do teste é identificar defeitos o mais cedo possível.\nv. A falta de cobertura para requisitos críticos de segurança é mais fácil de identificar\ne corrigir.\na) i, iv, v são verdadeiros para testes estáticos.\nb) i, iii e iv são verdadeiros para testes estáticos.\nc) ii e iii são verdadeiras para testes estáticos.\nd) ii, iv e v são verdadeiras para testes estáticos.\nSelecione UMA opção.\nVersão 1.7 Página 24 de 29 LiberarApril 1, 2025\n© Conselho Internacional de Qualificações em Teste de\nSoftware\nCertified Tester, Foundation Level\nSet A\nExemplo de Exame – Questões\nQuestão # A13 (1 ponto)\nQual das seguintes afirmações sobre avaliações formais é VERDADEIRA?\na) Algumas avaliações não exigem mais de uma função.\nb) O processo de revisão possui diversas atividades.\nc) A documentação a ser analisada não é distribuída antes da reunião de revisão, com exceção\ndo produto do trabalho para tipos de revisão específicos.\nd) Os defeitos encontrados durante a revisão não são relatados, pois não são detectados pelos\ntestes dinâmicos.\nSelecione UMA opção.\nQuestão #A14 (1 ponto)\nQue tarefas a gestão pode assumir durante uma avaliação formal?\na) Assumir a responsabilidade geral pela revisão.\nb) Decidir o que deve ser revisto.\nc) Garantir o bom funcionamento das reuniões de avaliação e moderá-las, se necessário.\nd) Registrar informações de revisão, como decisões de revisão.\nSelecione UMA opção.\nQuestão #A15 (1 ponto)\nUm sistema de armazenamento de vinho utiliza um dispositivo de controle que mede a\ntemperatura T da adega (medida em °C, arredondada para o grau mais próximo) e alerta o\nusuário caso ela se desvie do valor ideal de 12, de acordo com as seguintes regras:\n• Se T = 12, o sistema indica \"temperatura ideal\".\n• Se T < 12, o sistema diz: \"a temperatura está muito baixa!\"\n• Se T > 12, o sistema diz: \"a temperatura está muito alta!\"\nDeseja-se utilizar a análise de valor de contorno (BVA) de 3 pontos para verificar o\ncomportamento do dispositivo de controle. Uma entrada de teste é a temperatura em °C fornecida\npelo dispositivo.\nQual é o conjunto MÍNIMO de entradas de teste que atinge 100% da cobertura desejada?\na) 11, 12, 13\nb) 10, 12, 14\nc) 10, 11, 12, 13, 14\nd) 10, 11, 13, 14\nSelecione UMA opção.\nQuestão # A16 (1 ponto)\nQual das seguintes afirmações sobre testes de ramificação está CORRETA?\na) Se um programa incluir apenas ramificações incondicionais, então uma cobertura de\nramificação de 100% pode ser alcançada sem executar nenhum caso de teste.\nb) Se os casos de teste exercitarem todos os ramos incondicionais no código, então será\nalcançada uma cobertura de ramos de 100%.\nc) Se a cobertura de extratos atingir 100%, então a cobertura de agências também atingirá\n100%.\nd) Se for alcançada uma cobertura de 100% dos ramos, então todos os resultados de decisão\nem cada instrução de decisão no código serão executados.\nSelecione UMA opção.\nVersão 1.7 Página 25 de 29 LiberarApril 1, 2025\n© Conselho Internacional de Qualificações em Teste de\nSoftware\nCertified Tester, Foundation Level\nSet A\nExemplo de Exame – Questões\nQuestão #A17 (1 ponto)\nVocê está testando um aplicativo móvel que permite aos clientes acessar e gerenciar suas contas\nbancárias. Você está executando um conjunto de testes que envolve a avaliação de cada tela e de\ncada campo em cada tela, comparando-os com uma lista geral de boas práticas de interface do\nusuário, derivada de um livro popular sobre o assunto, que visa maximizar a usabilidade de tais\naplicativos.\nQual das seguintes opções MELHOR categoriza a técnica de teste que você está utilizando?\na) Caixa preta\nb) Exploratório\nc) Baseado em lista de verificação\nd) Erro de adivinhação\nSelecione UMA opção.\nQuestão #A18 (1 ponto)\nQual das seguintes opções descreve MELHOR a abordagem colaborativa para a escrita de\nhistórias de usuário?\na) As histórias de usuário são criadas por testadores e desenvolvedores e, em seguida,\naprovadas pelos representantes da empresa.\nb) As histórias de usuário são criadas em conjunto por representantes de negócios,\ndesenvolvedores e testadores.\nc) As histórias de usuário são criadas por representantes da área de negócios e verificadas\npor desenvolvedores e testadores.\nd) As histórias de usuário são criadas de forma a serem independentes, negociáveis,\nvaliosas, estimáveis, pequenas e testáveis.\nSelecione UMA opção.\nQuestão # A19 (1 ponto)\nConsidere a seguinte parte de um plano de testes.\nOs testes serão realizados utilizando testes de componentes e testes de integração de\ncomponentes. As normas exigem a comprovação de que 100% de cobertura de\nramificações foi alcançada para cada componente classificado como crítico.\nA qual parte do plano de testes pertence esta parte?\na) Comunicação\nb) Registro de riscos\nc) Contexto do teste\nd) Abordagem de teste\nSelecione UMA opção .\nVersão 1.7 Página 26 de 29 LiberarApril 1, 2025\n© Conselho Internacional de Qualificações em Teste de\nSoftware\nCertified Tester, Foundation Level\nSet A\nExemplo de Exame – Questões\nQuestão #A20 (1 ponto)\nSua equipe usa o Planning Poker para estimar o esforço de teste necessário para um novo\nrecurso. Existe uma regra na equipe que permite aplicar regras como \"aceitar o número com mais\nvotos\" caso não haja tempo suficiente para chegar a um consenso e a variação nos resultados\nseja pequena.\nApós duas rodadas, não se chegou a um consenso, então a terceira rodada foi iniciada. Você\npode ver os resultados da estimativa do teste na tabela abaixo.\nEstimativas dos membros da equipe\nRodada 1 21 2 5 34 13 8 2\nRodada 2 13 8 8 34 13 8 5\nRodada 3 13 8 13 13 13 13 8\nQual das seguintes opções é o MELHOR exemplo do próximo passo?\na) O Product Owner precisa intervir e tomar a decisão final.\nb) Aceitar 13 como a estimativa final do teste, pois este valor obteve a maioria dos votos.\nc) Nenhuma outra ação é necessária. Chegou-se a um consenso.\nd) Remova o novo recurso da versão atual, pois ainda não se chegou a um consenso.\nSelecione UMA opção.\nQuestão # A21 (1 ponto)\nQual das seguintes afirmações é VERDADEIRA em relação à pirâmide de testes?\na) Isso enfatiza a importância de se ter muito mais testes nos níveis mais baixos de avaliação.\nb) Isso sugere que cada teste de baixo nível verifica grande parte da funcionalidade.\nc) Este documento descreve a distribuição dos tipos de teste ao longo do ciclo de vida de\ndesenvolvimento de software (SDLC).\nd) Isso não tem impacto na construção de testes automatizados.\nSelecione UMA opção.\nQuestão #A22 (1 ponto)\nDurante a análise de risco, a equipe considerou o seguinte risco: \" O sistema permite um desconto\nmuito alto para um cliente \". A equipe estimou que o impacto do risco é muito alto.\nO que se pode dizer sobre a probabilidade de risco?\na) É também muito elevado. Um alto impacto de risco implica sempre uma alta probabilidade\nde risco.\nb) É muito baixo. Alto impacto de risco sempre implica baixa probabilidade de risco.\nc) Não se pode afirmar nada sobre a probabilidade do risco. O impacto do risco e a\nprobabilidade do risco são independentes.\nd) A probabilidade de risco não é importante quando o impacto é tão elevado. Não é\nnecessário defini-la.\nSelecione UMA opção.\nVersão 1.7 Página 27 de 29 LiberarApril 1, 2025\n© Conselho Internacional de Qualificações em Teste de\nSoftware\nCertified Tester, Foundation Level\nSet A\nExemplo de Exame – Questões\nQuestão #A23 (1 ponto)\nA lista a seguir contém os riscos identificados para o desenvolvimento de um novo produto de\nsoftware:\ni. A gerência realoca dois testadores experientes para outro projeto.\nii. O sistema não está em conformidade com os padrões de segurança.\niii. O tempo de resposta do sistema excede os requisitos do usuário.\niv. Os stakeholders têm expectativas imprecisas.\nv. Pessoas com deficiência têm problemas ao usar o sistema.\nQuais deles representam riscos do projeto?\na) i e iv são riscos do projeto\nb) iv e v são riscos do projeto\nc) eu, iii são riscos do projeto\nd) ii, v são riscos do projeto\nSelecione UMA opção.\nQuestão # A24 (1 ponto)\nQual das seguintes opções é um exemplo de como a análise de risco do produto influencia a\nabrangência e o escopo dos testes?\na) O gerente de testes monitora e reporta diariamente o nível de todos os riscos conhecidos ,\npara que os stakeholders possam tomar uma decisão informada sobre a data de\nlançamento.\nb) Um dos riscos identificados foi a \" falta de suporte a bancos de dados de código aberto \",\nentão a equipe decidiu integrar o sistema a um banco de dados de código aberto.\nc) Durante a análise quantitativa de riscos, a equipe estimou o nível total de todos os riscos\nidentificados e o apresentou como o risco residual total antes dos testes.\nd) A avaliação de riscos revelou um nível muito alto de riscos de desempenho, portanto,\ndecidiu-se realizar testes detalhados de eficiência de desempenho logo no início do ciclo de\nvida de desenvolvimento de software (SDLC).\nSelecione UMA opção.\nQuestão #A25 (1 ponto)\nQuais das DUAS opções a seguir são métricas comuns usadas para relatar o nível de qualidade\ndo objeto de teste?\na) Número de defeitos encontrados durante os testes do sistema\nb) Esforço total no projeto de testes dividido pelo número de casos de teste projetados.\nc) Número de procedimentos de teste executados\nd) Número de defeitos encontrados dividido pelo tamanho do produto.\ne) Tempo necessário para reparar um defeito\nSelecione DUAS opções.\nVersão 1.7 Página 28 de 29 LiberarApril 1, 2025\n© Conselho Internacional de Qualificações em Teste de\nSoftware\nCertified Tester, Foundation Level\nSet A\nExemplo de Exame – Questões\nQuestão #A26 (1 ponto)\nQual das seguintes informações contidas em um relatório de progresso de teste é a MENOS útil\npara representantes comerciais?\na) Obstáculos aos testes\nb) Cobertura de agências alcançada\nc) Progresso do teste\nd) Novos riscos dentro do ciclo de testes\nSelecione UMA opção\nVersão 1.7 Página 29 de 29 LiberarApril 1, 2025\n© Conselho Internacional de Qualificações em Teste de\nSoftware",
+      "opts": {
+        "A": "Quadrante de testes ágeis Q1: voltado para a tecnologia, dando suporte à equipe de",
+        "B": "Quadrante de testes ágeis Q2: voltado para o negócio, dando suporte à equipe de",
+        "C": "Quadrante de testes ágeis Q3: voltado para o negócio, análise crítica do produto",
+        "D": "Quadrante de testes ágeis Q4: tecnologia voltada para o produto, análise crítica."
+      }
+    }
+  },
+  "exam_a_answers": {
+    "1": "c",
+    "2": "a",
+    "3": "a",
+    "4": "b",
+    "5": "b",
+    "7": "b",
+    "8": "d",
+    "9": "d",
+    "10": "c",
+    "11": "d",
+    "12": "c",
+    "13": "a",
+    "14": "b",
+    "15": "a",
+    "16": "d",
+    "17": "b",
+    "18": "d",
+    "19": "c",
+    "20": "b",
+    "21": "a",
+    "22": "d",
+    "23": "d",
+    "24": "a",
+    "25": "d",
+    "26": "a",
+    "27": "c",
+    "28": "b",
+    "29": "a",
+    "30": "c",
+    "32": "d",
+    "33": "a",
+    "34": "a",
+    "35": "c",
+    "36": "d",
+    "37": "c",
+    "38": "c",
+    "39": "c",
+    "40": "b"
+  },
+  "exam_a_refs": {
+    "1": "FL-1.1.1",
+    "2": "FL-1.2.1",
+    "3": "FL-1.3.1",
+    "4": "FL-1.4.1",
+    "5": "FL-1.4.2",
+    "7": "FL-1.5.1",
+    "8": "FL-1.5.2",
+    "9": "FL-2.1.2",
+    "10": "FL-2.1.3",
+    "11": "FL-2.1.5",
+    "12": "FL-2.1.6",
+    "13": "FL-2.2.1",
+    "14": "FL-2.2.3",
+    "15": "FL-3.1.2",
+    "16": "FL-3.2.1",
+    "17": "FL-3.2.4",
+    "18": "FL-3.2.5",
+    "19": "FL-4.1.1",
+    "20": "FL-4.2.1",
+    "21": "FL-4.2.2",
+    "22": "FL-4.2.3",
+    "23": "FL-4.2.4",
+    "24": "FL-4.3.1",
+    "25": "FL-4.3.3",
+    "26": "FL-4.4.1",
+    "27": "FL-4.4.2",
+    "28": "FL-4.5.2",
+    "29": "FL-4.5.3",
+    "30": "FL-5.1.2",
+    "32": "FL-5.1.4",
+    "33": "FL-5.1.5",
+    "34": "FL-5.1.7",
+    "35": "FL-5.2.4",
+    "36": "FL-5.3.3",
+    "37": "FL-5.4.1",
+    "38": "FL-5.5.1",
+    "39": "FL-6.1.1",
+    "40": "FL-6.2.1"
+  },
+  "exam_b_questions": {
+    "1": {
+      "text": "Acompanhamento do fluxo de trabalho de suporte",
+      "opts": {}
+    },
+    "2": {
+      "text": "Facilitar a comunicação",
+      "opts": {}
+    },
+    "3": {
+      "text": "Máquinas virtuais",
+      "opts": {}
+    },
+    "4": {
+      "text": "Avaliações de suporte\nE as seguintes categorias de ferramentas de teste:\nQual das seguintes opções MELHOR corresponde às descrições e categorias?\na) 1A, 2B, 3C, 4D\nb) 1B, 2D, 3C, 4A\nc) 1C, 2D, 3B, 4A\nd) 1D, 2C, 3A, 4B\nSelecione UMA opção.\nQuestão 40 (1 ponto)\nQual das seguintes opções é MAIS provável de ser um benefício da automação de testes?\na) Fornece medidas de cobertura que são complexas demais para serem derivadas por\nhumanos.\nb) A responsabilidade pelos testes é compartilhada com o fornecedor da ferramenta.\nc) Isso elimina a necessidade de pensamento crítico na análise dos resultados dos testes.\nd) Ele gera casos de teste a partir de uma análise do código do programa.\nSelecione UMA opção.\nVersão1.7 Página 20de 20 1 de Abril de 2025\n© Conselho Internacional de Qualificações em Teste de Software",
+      "opts": {
+        "A": "Ferramentas de teste estático",
+        "B": "Ferramentas que suportam escalabilidade e padronização de implantação",
+        "C": "Ferramentas DevOps",
+        "D": "Ferramentas de colaboração"
+      }
+    }
+  },
+  "exam_b_answers": {
+    "1": "d",
+    "2": "b",
+    "3": "d",
+    "5": "c",
+    "6": "b",
+    "7": "b",
+    "8": "d",
+    "9": "b",
+    "10": "b",
+    "12": "b",
+    "14": "d",
+    "15": "b",
+    "16": "c",
+    "17": "d",
+    "18": "c",
+    "19": "d"
+  },
+  "exam_b_refs": {
+    "1": "FL-1.2.1",
+    "2": "FL-1.2.2",
+    "3": "FL-1.3.1",
+    "5": "FL-1.4.2",
+    "6": "FL-1.4.4",
+    "7": "FL-1.5.1",
+    "8": "FL-1.5.2",
+    "9": "FL-2.1.1",
+    "10": "FL-2.1.2",
+    "12": "FL-2.1.4",
+    "14": "FL-2.2.3",
+    "15": "FL-3.1.3",
+    "16": "FL-3.2.1",
+    "17": "FL-3.2.2",
+    "18": "FL-3.2.3",
+    "19": "FL-4.1.1"
+  }
+}
