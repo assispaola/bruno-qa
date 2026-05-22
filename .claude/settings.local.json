@@ -22,7 +22,11 @@
       "WebFetch(domain:www.bcs.org)",
       "Bash(python -c ' *)",
       "WebFetch(domain:github.com)",
-      "Bash(node --check \"C:/projetos/bruno-qa/bruno-qa/app.js\")"
+      "Bash(node --check \"C:/projetos/bruno-qa/bruno-qa/app.js\")",
+      "Bash(echo \"Exit code: $?\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ]
   }
 }
