@@ -1293,7 +1293,7 @@ nav {
   font-size: 0.84rem;
   color: var(--text);
   padding: 13px 18px;
-  background: var(--surface2);
+  background: #09090c;
   border: 1px solid var(--border);
   border-radius: 10px;
   line-height: 1.68;
