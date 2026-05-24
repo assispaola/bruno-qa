@@ -1618,10 +1618,10 @@ nav {
     linear-gradient(
       to right,
       var(--surface) 0%,
-      rgba(9, 9, 13, 0.75) 55%,
+      rgba(148, 0, 19, 0.62) 55%,
       rgba(9, 9, 13, 0.3) 100%
     ),
-    url('imgs/sett.png') right center / cover no-repeat;
+    url('imgs/sett.png') center center / cover no-repeat;
 }
 .sim-mode-card.boss-card:hover {
   border-color: var(--gold);
