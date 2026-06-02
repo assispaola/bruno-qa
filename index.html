@@ -436,6 +436,24 @@
       </div>
       <div class="tip">A chave é salva apenas no seu navegador (localStorage) e enviada somente para a API da Anthropic ao usar o chat. Nunca sai do seu computador de outra forma.</div>
       <div class="info-box" style="margin-top:0;">O modelo usado é <strong>claude-sonnet-4-5</strong> com contexto especializado no Syllabus CTFL 4.0.</div>
+
+      <!-- EXPORT / IMPORT -->
+      <div class="cb" style="margin-top:16px;border-top:1px solid var(--border);padding-top:20px;">
+        <h3>📱 Sincronizar entre Dispositivos</h3>
+        <p style="margin-bottom:14px;">Exporte seu progresso (XP, capítulos, quizzes, conquistas) como um código e importe em qualquer outro dispositivo ou navegador.</p>
+
+        <div style="margin-bottom:16px;">
+          <button class="start-btn" onclick="exportProgress()" style="width:100%;margin-bottom:8px;background:linear-gradient(135deg,#3a9ff0,#2563eb);">📤 Exportar Progresso</button>
+          <textarea id="exportOutput" readonly style="display:none;width:100%;min-height:80px;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px;color:var(--muted2);font-family:monospace;font-size:.75rem;resize:vertical;box-sizing:border-box;word-break:break-all;" placeholder="Código gerado aqui..."></textarea>
+          <div id="exportMsg" style="display:none;font-size:.82rem;margin-top:6px;font-weight:600;"></div>
+        </div>
+
+        <div>
+          <textarea id="importInput" style="width:100%;min-height:70px;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px;color:var(--fg);font-family:monospace;font-size:.75rem;resize:vertical;box-sizing:border-box;margin-bottom:8px;" placeholder="Cole aqui o código exportado de outro dispositivo..."></textarea>
+          <button onclick="importProgress()" style="width:100%;background:none;border:1px solid #22c55e;border-radius:10px;padding:10px;color:#22c55e;cursor:pointer;font-family:'Outfit',sans-serif;font-size:.88rem;font-weight:700;transition:all .2s;" onmouseover="this.style.background='#22c55e22'" onmouseout="this.style.background='none'">📥 Importar Progresso</button>
+          <div id="importMsg" style="display:none;font-size:.82rem;margin-top:6px;font-weight:600;"></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

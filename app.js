@@ -1838,6 +1838,54 @@ function save(){
 }
 
 // ═══════════════════════════════════════════════
+// EXPORT / IMPORT DE PROGRESSO
+// ═══════════════════════════════════════════════
+function exportProgress(){
+  const keys = ['sch_done','sch_xp','sch_checks','sch_qr','sch_ach',
+                 'sch_simPassed','sch_bossPassed','sch_bestSim',
+                 'sch_flips','sch_combo','sch_start'];
+  const data = {};
+  keys.forEach(k => { const v = localStorage.getItem(k); if(v !== null) data[k] = v; });
+  const code = btoa(unescape(encodeURIComponent(JSON.stringify(data))));
+  const out = document.getElementById('exportOutput');
+  out.value = code;
+  out.style.display = 'block';
+  out.select();
+  try { document.execCommand('copy'); showExportMsg('✅ Código copiado! Cole em outro dispositivo.', '#22c55e'); }
+  catch(e) { showExportMsg('📋 Selecione e copie o código acima.', 'var(--gold)'); }
+}
+function showExportMsg(msg, color){
+  const el = document.getElementById('exportMsg');
+  el.textContent = msg;
+  el.style.color = color;
+  el.style.display = 'block';
+  setTimeout(() => el.style.display = 'none', 4000);
+}
+function importProgress(){
+  const inp = document.getElementById('importInput').value.trim();
+  if(!inp){ showImportMsg('⚠️ Cole o código exportado primeiro.', 'var(--gold)'); return; }
+  try {
+    const data = JSON.parse(decodeURIComponent(escape(atob(inp))));
+    const validKeys = ['sch_done','sch_xp','sch_checks','sch_qr','sch_ach',
+                       'sch_simPassed','sch_bossPassed','sch_bestSim',
+                       'sch_flips','sch_combo','sch_start'];
+    let count = 0;
+    validKeys.forEach(k => { if(data[k] !== undefined){ localStorage.setItem(k, data[k]); count++; } });
+    showImportMsg(`✅ Progresso importado (${count} registros)! Recarregando...`, '#22c55e');
+    setTimeout(() => location.reload(), 1500);
+  } catch(e) {
+    showImportMsg('❌ Código inválido. Verifique se copiou corretamente.', 'var(--red)');
+  }
+}
+function showImportMsg(msg, color){
+  const el = document.getElementById('importMsg');
+  el.textContent = msg;
+  el.style.color = color;
+  el.style.display = 'block';
+  setTimeout(() => { if(!msg.includes('Recarregando')) el.style.display = 'none'; }, 4000);
+}
+
+// ═══════════════════════════════════════════════
 // SETTINGS — API KEY (ETAPA 2: Sensei fix)
 // ═══════════════════════════════════════════════
 function openSettings(){
