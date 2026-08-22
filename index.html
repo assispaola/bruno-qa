@@ -2,8 +2,12 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Schneider QA — CTFL 4.0 ⚔️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Schneider QA — CTFL 4.0</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,36 +30,89 @@
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <div class="nav-logo"><span class="nav-sword">⚔</span> SCHNEIDER</div>
-    <div class="nav-tabs">
-      <button class="nav-tab active" onclick="showTab('home',this)">🏠 Início</button>
-      <button class="nav-tab" onclick="showTab('sim',this)">🎯 Simulado</button>
-      <button class="nav-tab" onclick="showTab('flash',this)">⚡ Flashcards</button>
-      <button class="nav-tab" onclick="showTab('crono',this)">📅 Cronograma</button>
-      <button class="nav-tab" onclick="showTab('arsenal',this)">⚔️ Arsenal</button>
-      <button class="nav-tab" onclick="showTab('tutor',this)">🗡️ Sensei</button>
+    <div class="nav-logo">
+      <svg class="nav-logo-mark" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M16.5 3 9.2 10.3"/>
+        <path d="M7.4 8.9 10.6 12.1"/>
+        <path d="M9.2 10.3 4 15.5"/>
+        <path d="M15.3 4.2l1.2 1.2"/>
+      </svg>
+      SCHNEIDER
+    </div>
+    <button class="nav-burger" id="navBurger" onclick="toggleNavMenu()" aria-label="Abrir menu" aria-expanded="false" aria-controls="navTabs">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-tabs" id="navTabs">
+      <button class="nav-tab active" onclick="showTab('home',this);closeNavMenu()">
+        <svg class="nav-tab-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 10 3l7 6.5"/><path d="M5 8.5V17h10V8.5"/></svg>
+        <span>Início</span>
+      </button>
+      <button class="nav-tab" onclick="showTab('sim',this);closeNavMenu()">
+        <svg class="nav-tab-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="6.7"/><circle cx="10" cy="10" r="3.3"/><circle cx="10" cy="10" r="0.6" fill="currentColor" stroke="none"/></svg>
+        <span>Simulado</span>
+      </button>
+      <button class="nav-tab" onclick="showTab('flash',this);closeNavMenu()">
+        <svg class="nav-tab-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.3" y="3.3" width="10" height="7" rx="1.3"/><rect x="6.7" y="9.7" width="10" height="7" rx="1.3"/></svg>
+        <span>Flashcards</span>
+      </button>
+      <button class="nav-tab" onclick="showTab('crono',this);closeNavMenu()">
+        <svg class="nav-tab-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="14" height="12" rx="1.5"/><path d="M3 8h14"/><path d="M7 3v3M13 3v3"/></svg>
+        <span>Cronograma</span>
+      </button>
+      <button class="nav-tab" onclick="showTab('arsenal',this);closeNavMenu()">
+        <svg class="nav-tab-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l12 12M16 4 4 16"/><path d="M4 4l2.3.4M16 4l-2.3.4M4 16l2.3-.4M16 16l-2.3-.4"/></svg>
+        <span>Arsenal</span>
+      </button>
+      <button class="nav-tab" onclick="showTab('tutor',this);closeNavMenu()">
+        <svg class="nav-tab-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 5.5a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H8l-3.5 3v-3H5.5a2 2 0 0 1-2-2z"/></svg>
+        <span>Sensei</span>
+      </button>
     </div>
     <div class="nav-right">
-      <div class="nav-xp">🔥 <span id="xpTotal">0 XP</span></div>
-      <div class="nav-rank-badge" id="navRankBadge">Ronin</div>
-      <button class="nav-settings" onclick="openSettings()" title="Configurações da API">⚙️</button>
+      <div class="nav-status-pill">
+        <div class="nav-xp">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2.6c1 2.4-2.4 3.6-2.4 6.6a2.9 2.9 0 0 0 5.8 0c0-1.3-.7-1.9-1.1-2.8.9.3 2.1 1.6 2.1 3.8a4.4 4.4 0 0 1-8.8 0C5.6 6.9 8.5 5.6 10 2.6z"/></svg>
+          <span id="xpTotal">0 XP</span>
+        </div>
+        <span class="nav-status-divider" aria-hidden="true"></span>
+        <div class="nav-rank-badge" id="navRankBadge">Ronin</div>
+      </div>
+      <button class="nav-settings" onclick="openSettings()" title="Configurações da API" aria-label="Configurações da API">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="2.6"/><path d="M10 2.5v2.1M10 15.4v2.1M17.5 10h-2.1M4.6 10H2.5M15.1 4.9l-1.5 1.5M6.4 13.6l-1.5 1.5M15.1 15.1l-1.5-1.5M6.4 6.4 4.9 4.9"/></svg>
+      </button>
     </div>
   </div>
+  <div class="nav-menu-backdrop" id="navMenuBackdrop" onclick="closeNavMenu()"></div>
 </nav>
 
+<main>
 <!-- ═══════════ HOME ═══════════ -->
 <section id="tab-home" class="section active">
   <div class="hero">
-    <div>
-      <div class="hero-tag">⚔️ Sua jornada começa aqui</div>
-      <h1>Olá,<br><span>Schneider!</span><br>Bora dominar 🔥</h1>
-      <div class="hero-quote" id="heroQuote">
-        "Vou me tornar o maior espadachim do mundo!" <strong>— Roronoa Zoro</strong>
+    <canvas id="hero-particles" class="hero-particles-bg"></canvas>
+    <img class="hero-img" src="imgs/zoro-3.webp" alt="" aria-hidden="true">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-tag">⚔️ Sua jornada começa aqui</div>
+        <h1 style="font-size: 4rem; padding-bottom: 2rem;"><span style="font-style: italic;">Sua certificação. Sua espada.</span>
+        <!-- <svg class="hero-flame" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M10 2.4c1.1 2.6-2.6 3.9-2.6 7.1a3.1 3.1 0 0 0 6.2 0c0-1.4-.8-2-1.2-3 1 .3 2.3 1.7 2.3 4.1a4.7 4.7 0 0 1-9.4 0C5.3 7 8.4 5.6 10 2.4z" fill="url(#flameGrad)"/>
+            <defs>
+              <linearGradient id="flameGrad" x1="5" y1="2" x2="15" y2="18" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="var(--gold)"/>
+                <stop offset="1" stop-color="var(--red2)"/>
+              </linearGradient>
+            </defs>
+          </svg> -->
+        </h1>
+        <div class="hero-quote" id="heroQuote">
+          "Vou me tornar o maior espadachim do mundo!" <strong>— Roronoa Zoro</strong>
+        </div>
       </div>
-    </div>
-    <div class="hero-badge">
-      <div class="big">4.0</div>
-      <div class="small">CTFL<br>Syllabus</div>
+      <div class="hero-badge">
+        <div class="big">4.0</div>
+        <div class="small">CTFL<br>Syllabus</div>
+      </div>
     </div>
   </div>
 
@@ -91,17 +148,17 @@
     </div>
   </div>
 
-  <div class="section-title">🏆 Conquistas do Espadachim</div>
+  <h2 class="section-title">🏆 Conquistas do Espadachim</h2>
   <div class="achievements-grid" id="achGrid"></div>
 
-  <div class="section-title">📚 Os 6 Capítulos do CTFL 4.0</div>
+  <h2 class="section-title">📚 Os 6 Capítulos do CTFL 4.0</h2>
   <div class="modules-grid" id="modsGrid"></div>
 </section>
 
 <!-- ═══════════ SIMULADO ═══════════ -->
 <section id="tab-sim" class="section">
   <div id="simIntro">
-    <div class="section-title">🎯 Escolha seu Modo de Batalha</div>
+    <h2 class="section-title">🎯 Escolha seu Modo de Batalha</h2>
     <div class="sim-modes">
       <div class="sim-mode-card" onclick="startSim(false)">
         <span class="sim-mode-icon">🎯</span>
@@ -179,7 +236,7 @@
 
 <!-- ═══════════ FLASHCARDS ═══════════ -->
 <section id="tab-flash" class="section">
-  <div class="section-title">⚡ Flashcards — Clique para revelar a resposta</div>
+  <h2 class="section-title">⚡ Flashcards — Clique para revelar a resposta</h2>
   <div class="fc-filters" id="fcFilters"></div>
   <div class="fc-grid" id="fcGrid"></div>
 </section>
@@ -220,9 +277,10 @@
     </div>
   </div>
 
-  <div class="section-title">📌 Os 7 Princípios de Teste</div>
+  <h2 class="section-title">📌 Os 7 Princípios de Teste</h2>
   <div class="ref-card" style="margin-bottom:28px;">
     <div class="ref-body" style="padding:0;">
+      <div class="table-scroll">
       <table class="ref-table" style="width:100%">
         <thead><tr><th>#</th><th>Princípio</th><th>Palavra-chave</th></tr></thead>
         <tbody>
@@ -235,12 +293,14 @@
           <tr><td>7</td><td>Ilusão de ausência de defeitos — software sem bugs pode ser inútil</td><td style="color:var(--gold)">Ilusão</td></tr>
         </tbody>
       </table>
+      </div>
     </div>
   </div>
 
-  <div class="section-title">🎯 Técnicas de Teste — Quando Usar</div>
+  <h2 class="section-title">🎯 Técnicas de Teste — Quando Usar</h2>
   <div class="ref-card" style="margin-bottom:28px;">
     <div class="ref-body" style="padding:0;">
+      <div class="table-scroll">
       <table class="ref-table">
         <thead><tr><th>Técnica</th><th>Tipo</th><th>Use quando...</th></tr></thead>
         <tbody>
@@ -255,6 +315,7 @@
           <tr><td>Teste Exploratório</td><td>Experiência</td><td>Design + execução + aprendizado simultâneos</td></tr>
         </tbody>
       </table>
+      </div>
     </div>
   </div>
 
@@ -346,7 +407,7 @@
     </div>
   </div>
 
-  <div class="section-title">🗡️ Mindset Zoro para a Prova</div>
+  <h2 class="section-title">🗡️ Mindset Zoro para a Prova</h2>
   <div class="ref-card" style="margin-bottom:28px;">
     <div class="ref-body">
       <div class="ref-row"><div class="ref-key">"Nada aconteceu."</div><div class="ref-val red">Mantenha a calma sob pressão. Uma questão difícil não define a prova.</div></div>
@@ -359,7 +420,7 @@
 
 <!-- ═══════════ SENSEI (AI TUTOR) ═══════════ -->
 <section id="tab-tutor" class="section">
-  <div class="section-title">⚔️ Sensei Zoro — Tutor CTFL 4.0</div>
+  <h2 class="section-title">⚔️ Sensei Zoro — Tutor CTFL 4.0</h2>
   <div class="ai-card">
     <div class="ai-head">
       <div class="ai-ava">⚔️</div>
@@ -394,16 +455,18 @@
       <button class="q-chip" onclick="sendQuick('Como Zoro treinaria para o CTFL? Dica de rotina de estudos de 2 semanas')">Rotina Zoro</button>
     </div>
     <div class="ai-inp-row">
+      <label for="aiInp" class="sr-only">Sua pergunta para o Sensei Zoro</label>
       <textarea class="ai-inp" id="aiInp" placeholder="Sua dúvida, Schneider..." rows="1" onkeydown="handleAiKey(event)"></textarea>
-      <button class="ai-btn" id="aiBtn" onclick="sendAI()">➤</button>
+      <button class="ai-btn" id="aiBtn" onclick="sendAI()" aria-label="Enviar mensagem">➤</button>
     </div>
   </div>
 </section>
+</main>
 
 </div><!-- .page -->
 
 <!-- ═══════════ CAPÍTULO (PÁGINA FULL) ═══════════ -->
-<section id="tab-chapter" class="section">
+<section id="tab-chapter" class="section" role="main">
   <div class="chp-bar" id="chpBar">
     <button class="chp-back" onclick="backToHome()">← Voltar</button>
     <div class="chp-bar-meta">
@@ -420,7 +483,7 @@
   <div class="modal" style="max-width:500px;border-top-color:var(--gold);">
     <div class="modal-hd">
       <div><h2>⚙️ Configurações</h2><p>Configure a chave de API do Sensei Zoro</p></div>
-      <button class="modal-x" onclick="closeSettings()">✕</button>
+      <button class="modal-x" onclick="closeSettings()" aria-label="Fechar">✕</button>
     </div>
     <div class="modal-bd">
       <div class="cb">
@@ -428,9 +491,10 @@
         <p>O Sensei Zoro usa a <strong>API Claude da Anthropic</strong> para responder suas dúvidas sobre o CTFL. Você precisa de uma chave de API para ativar o tutor.</p>
         <p style="margin-top:8px;">Obtenha sua chave em <strong>console.anthropic.com</strong> → API Keys → Create Key.</p>
         <div style="margin-top:16px;">
+          <label for="apiKeyInput" class="sr-only">Chave da API Claude (Anthropic)</label>
           <input type="password" id="apiKeyInput" class="settings-input" placeholder="sk-ant-api03-..." autocomplete="off">
           <button class="start-btn" onclick="saveApiKey()" style="width:100%;margin-bottom:10px;">💾 Salvar Chave</button>
-          <button onclick="clearApiKey()" style="width:100%;background:none;border:1px solid var(--border);border-radius:10px;padding:10px;color:var(--muted2);cursor:pointer;font-family:'Outfit',sans-serif;font-size:.82rem;transition:all .2s;" onmouseover="this.style.borderColor='var(--red)'" onmouseout="this.style.borderColor='var(--border)'">🗑 Remover Chave</button>
+          <button onclick="clearApiKey()" style="width:100%;background:none;border:1px solid var(--border);border-radius:10px;padding:10px;color:var(--muted2);cursor:pointer;font-family:'Manrope',sans-serif;font-size:.82rem;transition:all .2s;" onmouseover="this.style.borderColor='var(--red)'" onmouseout="this.style.borderColor='var(--border)'">🗑 Remover Chave</button>
           <div class="settings-saved" id="settingsSaved">✅ Chave salva! O Sensei está pronto.</div>
         </div>
       </div>
@@ -443,14 +507,16 @@
         <p style="margin-bottom:14px;">Exporte seu progresso (XP, capítulos, quizzes, conquistas) como um código e importe em qualquer outro dispositivo ou navegador.</p>
 
         <div style="margin-bottom:16px;">
-          <button class="start-btn" onclick="exportProgress()" style="width:100%;margin-bottom:8px;background:linear-gradient(135deg,#3a9ff0,#2563eb);">📤 Exportar Progresso</button>
-          <textarea id="exportOutput" readonly style="display:none;width:100%;min-height:80px;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px;color:var(--muted2);font-family:monospace;font-size:.75rem;resize:vertical;box-sizing:border-box;word-break:break-all;" placeholder="Código gerado aqui..."></textarea>
+          <button class="start-btn sync-btn-export" onclick="exportProgress()">📤 Exportar Progresso</button>
+          <label for="exportOutput" class="sr-only">Código de progresso exportado</label>
+          <textarea id="exportOutput" readonly style="display:none;width:100%;min-height:80px;background:var(--surface3);border:1px solid var(--border);border-radius:10px;padding:10px;color:var(--muted2);font-family:monospace;font-size:.75rem;resize:vertical;box-sizing:border-box;word-break:break-all;" placeholder="Código gerado aqui..."></textarea>
           <div id="exportMsg" style="display:none;font-size:.82rem;margin-top:6px;font-weight:600;"></div>
         </div>
 
         <div>
-          <textarea id="importInput" style="width:100%;min-height:70px;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px;color:var(--fg);font-family:monospace;font-size:.75rem;resize:vertical;box-sizing:border-box;margin-bottom:8px;" placeholder="Cole aqui o código exportado de outro dispositivo..."></textarea>
-          <button onclick="importProgress()" style="width:100%;background:none;border:1px solid #22c55e;border-radius:10px;padding:10px;color:#22c55e;cursor:pointer;font-family:'Outfit',sans-serif;font-size:.88rem;font-weight:700;transition:all .2s;" onmouseover="this.style.background='#22c55e22'" onmouseout="this.style.background='none'">📥 Importar Progresso</button>
+          <label for="importInput" class="sr-only">Código de progresso para importar</label>
+          <textarea id="importInput" style="width:100%;min-height:70px;background:var(--surface3);border:1px solid var(--border);border-radius:10px;padding:10px;color:var(--text);font-family:monospace;font-size:.75rem;resize:vertical;box-sizing:border-box;margin-bottom:8px;" placeholder="Cole aqui o código exportado de outro dispositivo..."></textarea>
+          <button class="sync-btn-import" onclick="importProgress()">📥 Importar Progresso</button>
           <div id="importMsg" style="display:none;font-size:.82rem;margin-top:6px;font-weight:600;"></div>
         </div>
       </div>
@@ -459,14 +525,16 @@
 </div>
 
 <!-- SCROLL TO TOP -->
-<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Voltar ao topo">↑</button>
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Voltar ao topo" aria-label="Voltar ao topo">↑</button>
 
 <footer>
   Forjado para <strong>Schneider</strong> — sua vaga como QA está chegando! ⚔️
   <span class="kanji-deco">剣 道 最強</span><br>
-  Baseado no <strong>ISTQB® CTFL Syllabus v4.0 — BSTQB®</strong>
+  Baseado no <strong>ISTQB® CTFL Syllabus v4.0 — BSTQB®</strong><br>
+  Criado por <strong>Paola Assis</strong>
 </footer>
 
 <script src="app.js"></script>
+<script src="hero-particles.js"></script>
 </body>
 </html>

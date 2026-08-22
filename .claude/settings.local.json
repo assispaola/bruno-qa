@@ -26,7 +26,15 @@
       "Bash(echo \"Exit code: $?\")",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(git pull *)",
+      "Bash(git stash *)",
+      "Bash(node -e ' *)",
+      "Skill(playwright-cli)",
+      "Skill(playwright-cli:*)",
+      "Bash(pkill -f \"http.server 8934\")",
+      "Bash(rm -f full_home_before_scroll.png achievements_mobile.png nav_top.png achievements_360.png achievements_360_fresh.png)",
+      "Bash(rm -rf .playwright-cli)"
     ]
   }
 }

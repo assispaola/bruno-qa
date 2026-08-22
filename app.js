@@ -1807,17 +1807,27 @@ const CRONOS = {
 // ═══════════════════════════════════════════════
 // STATE
 // ═══════════════════════════════════════════════
+function safeParse(key, fallback){
+  const raw = localStorage.getItem(key);
+  if(raw === null) return fallback;
+  try{
+    const v = JSON.parse(raw);
+    if(Array.isArray(fallback) && !Array.isArray(v)) return fallback;
+    if(typeof fallback==='object' && !Array.isArray(fallback) && (typeof v!=='object' || v===null || Array.isArray(v))) return fallback;
+    return v;
+  }catch(e){ return fallback; }
+}
 const S = {
-  done: new Set(JSON.parse(localStorage.getItem('sch_done')||'[]')),
-  xp: parseInt(localStorage.getItem('sch_xp')||'0'),
-  checks: JSON.parse(localStorage.getItem('sch_checks')||'{}'),
-  quizResults: JSON.parse(localStorage.getItem('sch_qr')||'{}'),
-  achievements: new Set(JSON.parse(localStorage.getItem('sch_ach')||'[]')),
+  done: new Set(safeParse('sch_done', [])),
+  xp: parseInt(localStorage.getItem('sch_xp')||'0') || 0,
+  checks: safeParse('sch_checks', {}),
+  quizResults: safeParse('sch_qr', {}),
+  achievements: new Set(safeParse('sch_ach', [])),
   simPassed: localStorage.getItem('sch_simPassed')==='1',
   bossPassed: localStorage.getItem('sch_bossPassed')==='1',
-  bestSim: parseInt(localStorage.getItem('sch_bestSim')||'0'),
-  flipsTotal: parseInt(localStorage.getItem('sch_flips')||'0'),
-  bestCombo: parseInt(localStorage.getItem('sch_combo')||'0'),
+  bestSim: parseInt(localStorage.getItem('sch_bestSim')||'0') || 0,
+  flipsTotal: parseInt(localStorage.getItem('sch_flips')||'0') || 0,
+  bestCombo: parseInt(localStorage.getItem('sch_combo')||'0') || 0,
   startDate: localStorage.getItem('sch_start')||new Date().toISOString(),
   cronWeeks: 2,
   fcFilter: 'Todos',
@@ -1825,16 +1835,20 @@ const S = {
 if(!localStorage.getItem('sch_start')) localStorage.setItem('sch_start', S.startDate);
 
 function save(){
-  localStorage.setItem('sch_done', JSON.stringify([...S.done]));
-  localStorage.setItem('sch_xp', S.xp);
-  localStorage.setItem('sch_checks', JSON.stringify(S.checks));
-  localStorage.setItem('sch_qr', JSON.stringify(S.quizResults));
-  localStorage.setItem('sch_ach', JSON.stringify([...S.achievements]));
-  localStorage.setItem('sch_simPassed', S.simPassed?'1':'0');
-  localStorage.setItem('sch_bossPassed', S.bossPassed?'1':'0');
-  localStorage.setItem('sch_bestSim', S.bestSim);
-  localStorage.setItem('sch_flips', S.flipsTotal);
-  localStorage.setItem('sch_combo', S.bestCombo);
+  try{
+    localStorage.setItem('sch_done', JSON.stringify([...S.done]));
+    localStorage.setItem('sch_xp', S.xp);
+    localStorage.setItem('sch_checks', JSON.stringify(S.checks));
+    localStorage.setItem('sch_qr', JSON.stringify(S.quizResults));
+    localStorage.setItem('sch_ach', JSON.stringify([...S.achievements]));
+    localStorage.setItem('sch_simPassed', S.simPassed?'1':'0');
+    localStorage.setItem('sch_bossPassed', S.bossPassed?'1':'0');
+    localStorage.setItem('sch_bestSim', S.bestSim);
+    localStorage.setItem('sch_flips', S.flipsTotal);
+    localStorage.setItem('sch_combo', S.bestCombo);
+  }catch(e){
+    console.warn('Não foi possível salvar o progresso (armazenamento indisponível ou cheio).', e);
+  }
 }
 
 // ═══════════════════════════════════════════════
@@ -1905,15 +1919,22 @@ function closeSettingsOverlay(e){
 function saveApiKey(){
   const inp = document.getElementById('apiKeyInput');
   const val = inp.value.trim();
-  if(val && !val.startsWith('•')){
-    localStorage.setItem('sch_apikey', val);
-    inp.value = '';
-    inp.placeholder = 'Chave configurada — cole nova para atualizar';
-    const saved = document.getElementById('settingsSaved');
+  const saved = document.getElementById('settingsSaved');
+  if(!val || val.startsWith('•')){
+    saved.textContent = '⚠️ Cole uma chave de API antes de salvar.';
+    saved.style.color = 'var(--gold)';
     saved.classList.add('show');
     setTimeout(()=>saved.classList.remove('show'), 3000);
-    updateSenseiStatus();
+    return;
   }
+  localStorage.setItem('sch_apikey', val);
+  inp.value = '';
+  inp.placeholder = 'Chave configurada — cole nova para atualizar';
+  saved.textContent = '✅ Chave salva! O Sensei está pronto.';
+  saved.style.color = '';
+  saved.classList.add('show');
+  setTimeout(()=>saved.classList.remove('show'), 3000);
+  updateSenseiStatus();
 }
 function clearApiKey(){
   if(confirm('Remover a chave de API? O Sensei ficará inativo.')){
@@ -1947,6 +1968,33 @@ function showTab(id, btn){
   document.getElementById('tab-'+id).classList.add('active');
   if(btn) btn.classList.add('active');
 }
+
+// ═══════════════════════════════════════════════
+// MOBILE NAV MENU
+// ═══════════════════════════════════════════════
+function toggleNavMenu(){
+  const open = document.getElementById('navTabs').classList.toggle('open');
+  document.getElementById('navBurger').classList.toggle('open', open);
+  document.getElementById('navBurger').setAttribute('aria-expanded', open);
+  document.getElementById('navMenuBackdrop').classList.toggle('show', open);
+}
+function closeNavMenu(){
+  document.getElementById('navTabs').classList.remove('open');
+  document.getElementById('navBurger').classList.remove('open');
+  document.getElementById('navBurger').setAttribute('aria-expanded', 'false');
+  document.getElementById('navMenuBackdrop').classList.remove('show');
+}
+
+// ═══════════════════════════════════════════════
+// TAP-TO-OPEN TOOLTIPS (touch devices)
+// ═══════════════════════════════════════════════
+document.addEventListener('click', function(e){
+  const tt = e.target.closest('[data-tooltip]');
+  document.querySelectorAll('[data-tooltip].tt-open').forEach(el=>{
+    if(el !== tt) el.classList.remove('tt-open');
+  });
+  if(tt) tt.classList.toggle('tt-open');
+});
 
 // ═══════════════════════════════════════════════
 // RANK SYSTEM
@@ -2065,7 +2113,7 @@ function updateStats(){
 // ═══════════════════════════════════════════════
 function renderContentBlock(b){
   let html = `<div class="topic-sec">
-    <div class="topic-head"><h3>${b.title}</h3></div>
+    <div class="topic-head"><h2>${b.title}</h2></div>
     <div class="topic-content">`;
 
   if(b.text) html += `<div class="topic-intro">${b.text}</div>`;
@@ -2104,7 +2152,7 @@ function openMod(id){
     <div class="chp-hero-icon">${m.icon}</div>
     <div>
       <div class="chp-hero-num">Capítulo ${m.id} de 6 · CTFL 4.0</div>
-      <div class="chp-hero-title">${m.name}</div>
+      <h1 class="chp-hero-title">${m.name}</h1>
       <div class="chp-hero-desc">${m.desc}</div>
     </div>
     <div class="chp-hero-badge">
@@ -2397,7 +2445,7 @@ function finishSim(){
       </div>`;
     }).filter(Boolean);
     if(rev.length) document.getElementById('simReview').innerHTML=
-      `<div class="section-title" style="margin-bottom:16px">📋 Questões Erradas — Revisão Detalhada</div>${rev.join('')}`;
+      `<h2 class="section-title" style="margin-bottom:16px">📋 Questões Erradas — Revisão Detalhada</h2>${rev.join('')}`;
   }
   document.getElementById('simResult').classList.add('show');
   save();
@@ -2478,7 +2526,7 @@ function renderCrono(){
             <div class="day-title">${d.t}</div>
             <div class="day-desc">${d.desc}</div>
           </div>
-          <button class="day-check ${checked?'checked':''}" onclick="toggleCheck('${key}',this)">✓</button>
+          <button class="day-check ${checked?'checked':''}" onclick="toggleCheck('${key}',this)" aria-pressed="${!!checked}" aria-label="Marcar ${d.t} como concluído">✓</button>
         </div>`;
       }).join('')}</div>
     </div>`).join('');
@@ -2487,11 +2535,13 @@ function toggleCheck(key,el){
   if(S.checks[key]){
     delete S.checks[key];
     el.classList.remove('checked');
+    el.setAttribute('aria-pressed','false');
     S.xp = Math.max(0, S.xp - 10);
     updateStats();
   } else {
     S.checks[key]=1;
     el.classList.add('checked');
+    el.setAttribute('aria-pressed','true');
     S.xp += 10;
     updateStats();
     checkAchievements();
@@ -2558,12 +2608,16 @@ async function sendAI(){
 function sendQuick(t){ document.getElementById('aiInp').value=t; sendAI(); }
 function handleAiKey(e){ if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendAI();} }
 
+function escapeHtml(s){
+  return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
 function addAIMsg(txt,role){
   const el=document.getElementById('aiMsgs');
   const ava=role==='ai'?'⚔️':'🧑‍💻';
+  const safe=escapeHtml(txt).replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br>');
   el.insertAdjacentHTML('beforeend',`<div class="msg ${role}">
     <div class="msg-ava">${ava}</div>
-    <div class="bubble">${txt.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br>')}</div>
+    <div class="bubble">${safe}</div>
   </div>`);
   el.scrollTop=el.scrollHeight;
 }
