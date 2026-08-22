@@ -397,7 +397,7 @@ nav {
   background: var(--surface);
   overflow: hidden;
   position: relative;
-  min-height: 70vh;
+  min-height: 58vh;
   display: flex;
   align-items: center;
 }
@@ -507,6 +507,8 @@ nav {
   line-height: 0.95;
   letter-spacing: 0.02em;
   margin-bottom: 14px;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 .hero h1 span {
   color: white;
@@ -2870,8 +2872,8 @@ footer strong {
 /* Phones/small tablets (≤767px) */
 @media (max-width: 767px) {
   .hero-img {
-    width: 100%;
-    object-position: 60% 15%;
+ width: 60%;
+        object-position: 36% 20%;
   }
   .hero::before {
     background: linear-gradient(
